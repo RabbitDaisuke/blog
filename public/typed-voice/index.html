@@ -19,8 +19,8 @@
     </nav>
   </header>
   <main id="top">
-    <section class="hero shell">
-      <div class="hero-copy">
+    <section class="hero">
+      <div class="hero-copy shell">
         <p class="eyebrow">Browser TTS / Mobile Ready</p>
         <h1>文字を打つ。<br>そのまま、声になる。</h1>
         <p class="hero-lead">typed-voiceは、ブラウザから文章を音声に変換するためのツールです。スマートフォンやタブレットだけでも使えて、必要なら自宅のPCへ音声合成を任せることもできます。</p>
@@ -35,10 +35,6 @@
           <li>PCへ合成を任せられる</li>
         </ul>
       </div>
-      <figure class="shot shot-hero">
-        <div class="shot-placeholder"><strong>&lt;画像01&gt;</strong><span>スマホでtyped-voiceを開いたHero用スクリーンショット</span><code>assets/01-hero.webp</code></div>
-        <img src="./assets/01-hero.webp" alt="スマートフォンでtyped-voiceを利用している画面" fetchpriority="high" onload="this.classList.add('is-loaded')" onerror="this.hidden=true">
-      </figure>
     </section>
     <section id="overview" class="section shell">
       <div class="section-heading">
@@ -52,10 +48,6 @@
         <article class="feature-card"><span class="feature-number">03</span><h3>準備後はオフラインでも</h3><p>音声モデルを端末へ準備しておけば、通信できない場所でも端末側で音声を生成できます。</p></article>
         <article class="feature-card"><span class="feature-number">04</span><h3>重い処理はPCへ</h3><p>モバイル側はクライアントとして使い、音声合成だけを別のPCへ任せるサーバーモードも用意しています。</p></article>
       </div>
-      <figure class="shot shot-wide">
-        <div class="shot-placeholder"><strong>&lt;画像02&gt;</strong><span>typed-voiceの入力画面・読み上げ履歴が分かるスクリーンショット</span><code>assets/02-main-ui.webp</code></div>
-        <img src="./assets/02-main-ui.webp" alt="typed-voiceの入力画面と読み上げ履歴" loading="lazy" onload="this.classList.add('is-loaded')" onerror="this.hidden=true">
-      </figure>
       <div class="article-copy">
         <h3>ブラウザを開けば、そこが読み上げ画面</h3>
         <p>typed-voiceは「モデルをどう動かすか」を先に考えるための画面ではありません。はじめて開いたときの案内に沿って準備したら、普段は文章を入力して読み上げるだけです。</p>
@@ -73,7 +65,10 @@
         </div>
         <figure class="shot shot-phone">
           <div class="shot-placeholder"><strong>&lt;画像03&gt;</strong><span>モデル選択・ダウンロード準備のモバイル画面</span><code>assets/03-offline.webp</code></div>
-          <img src="./assets/03-offline.webp" alt="typed-voiceでオフライン用の音声モデルを準備する画面" loading="lazy" onload="this.classList.add('is-loaded')" onerror="this.hidden=true">
+          <picture>
+            <source srcset="./assets/03-offline.webp" type="image/webp">
+            <img src="./assets/03-offline.png" alt="typed-voiceでオフライン用の音声モデルを準備する画面" loading="lazy" onload="this.classList.add('is-loaded')" onerror="this.hidden=true">
+          </picture>
         </figure>
       </div>
     </section>
@@ -91,11 +86,17 @@
       <div class="media-pair">
         <figure class="shot">
           <div class="shot-placeholder"><strong>&lt;画像04&gt;</strong><span>PC側に表示されたQRコード・接続案内</span><code>assets/04-pairing.webp</code></div>
-          <img src="./assets/04-pairing.webp" alt="PC側のtyped-voice-serverに表示された接続用QRコード" loading="lazy" onload="this.classList.add('is-loaded')" onerror="this.hidden=true">
+          <picture>
+            <source srcset="./assets/04-pairing.webp" type="image/webp">
+            <img src="./assets/04-pairing.png" alt="PC側のtyped-voice-serverに表示された接続用QRコード" loading="lazy" onload="this.classList.add('is-loaded')" onerror="this.hidden=true">
+          </picture>
         </figure>
         <figure class="shot">
           <div class="shot-placeholder"><strong>&lt;画像05&gt;</strong><span>スマホ側のクライアントモード接続画面</span><code>assets/05-client-mode.webp</code></div>
-          <img src="./assets/05-client-mode.webp" alt="スマートフォンのtyped-voiceクライアントモード画面" loading="lazy" onload="this.classList.add('is-loaded')" onerror="this.hidden=true">
+          <picture>
+            <source srcset="./assets/05-client-mode.webp" type="image/webp">
+            <img src="./assets/05-client-mode.png" alt="スマートフォンのtyped-voiceクライアントモード画面" loading="lazy" onload="this.classList.add('is-loaded')" onerror="this.hidden=true">
+          </picture>
         </figure>
       </div>
       <div class="article-copy article-copy-centered">
@@ -118,12 +119,18 @@
         </div>
         <figure class="shot shot-dark">
           <div class="shot-placeholder"><strong>&lt;画像06&gt;</strong><span>typed-voice-server 管理画面。Worker数とモデル選択が見える状態</span><code>assets/06-server-admin.webp</code></div>
-          <img src="./assets/06-server-admin.webp" alt="typed-voice-serverの管理画面" loading="lazy" onload="this.classList.add('is-loaded')" onerror="this.hidden=true">
+          <picture>
+            <source srcset="./assets/06-server-admin.webp" type="image/webp">
+            <img src="./assets/06-server-admin.png" alt="typed-voice-serverの管理画面" loading="lazy" onload="this.classList.add('is-loaded')" onerror="this.hidden=true">
+          </picture>
         </figure>
         <div class="media-pair media-pair-small">
           <figure class="shot shot-dark">
             <div class="shot-placeholder"><strong>&lt;画像07&gt;</strong><span>Trusted Worker参加画面</span><code>assets/07-worker.webp</code></div>
-            <img src="./assets/07-worker.webp" alt="typed-voice-serverへ参加しているTrusted Worker画面" loading="lazy" onload="this.classList.add('is-loaded')" onerror="this.hidden=true">
+            <picture>
+              <source srcset="./assets/07-worker.webp" type="image/webp">
+              <img src="./assets/07-worker.png" alt="typed-voice-serverへ参加しているTrusted Worker画面" loading="lazy" onload="this.classList.add('is-loaded')" onerror="this.hidden=true">
+            </picture>
           </figure>
           <div class="server-note">
             <p class="eyebrow">For Windows</p>
