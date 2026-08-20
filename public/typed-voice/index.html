@@ -23,16 +23,16 @@
     <section class="hero">
       <div class="hero-copy shell">
         <div class="hero-glass">
-        <p class="eyebrow">Browser TTS / Mobile Ready</p>
+        <p class="eyebrow">Browser TTS</p>
         <h1>文字を打つ。<br>そのまま、声になる。</h1>
-        <p class="hero-lead">typed-voiceは、ブラウザから文章を音声に変換するためのツールです。スマートフォンやタブレットだけでも使えて、必要なら自宅のPCへ音声合成を任せることもできます。</p>
+        <p class="hero-lead">typed-voiceは、ブラウザから文章を音声に変換するためのツールです。必要なら自宅のPCへ音声合成を任せることもできます。</p>
         <div class="hero-actions">
           <a class="button button-primary" href="https://daisukedaisuke.github.io/typed-voice/">typed-voiceを開く</a>
           <a class="button button-secondary" href="#overview">できることを見る</a>
         </div>
         <ul class="hero-points" aria-label="typed-voiceの特徴">
           <li>ブラウザで動く</li>
-          <li>モバイル対応</li>
+          <li>ブラウザ利用</li>
           <li>オフライン利用</li>
           <li>PCへ合成を任せられる</li>
         </ul>
@@ -48,7 +48,7 @@
       </div>
       <div class="feature-grid">
         <article class="feature-card"><span class="feature-number">01</span><h3>文章を、その場で読み上げ</h3><p>入力した文章を音声へ変換。会話中に打ち込んだ文章を声として届けたいときにも使えます。</p></article>
-        <article class="feature-card"><span class="feature-number">02</span><h3>スマホ・タブレットでも</h3><p>専用アプリを入れるのではなく、ブラウザから同じ画面を利用できます。PCの前にいないときも使えます。</p></article>
+        <article class="feature-card"><span class="feature-number">02</span><h3>ブラウザから使える</h3><p>専用アプリを入れるのではなく、対応するブラウザから同じ画面を利用できます。</p></article>
         <article class="feature-card"><span class="feature-number">03</span><h3>準備後はオフラインでも</h3><p>音声モデルを端末へ準備しておけば、通信できない場所でも端末側で音声を生成できます。</p></article>
         <article class="feature-card"><span class="feature-number">04</span><h3>重い処理はPCへ</h3><p>モバイル側はクライアントとして使い、音声合成だけを別のPCへ任せるサーバーモードも用意しています。</p></article>
       </div>
@@ -80,12 +80,12 @@
     <section id="server-mode" class="section shell">
       <div class="section-heading section-heading-wide">
         <p class="eyebrow">Server mode</p>
-        <h2>スマホから、PCの力を借りる。</h2>
+        <h2>別の端末から、PCの力を借りる。</h2>
         <p>モバイル端末で画面を操作しながら、実際の音声合成は別のPCへ任せることもできます。端末側へ大きな負荷を掛けたくないときのためのクライアントモードです。</p>
       </div>
       <div class="steps">
         <article><span>1</span><h3>PCでサーバーを起動</h3><p>typed-voice-serverを起動すると、モバイルを接続するための情報が用意されます。</p></article>
-        <article><span>2</span><h3>QRコードで接続</h3><p>スマートフォンやタブレットならQRコードを読み取るだけ。ファイルを渡せる環境では接続鍵ファイルも利用できます。</p></article>
+        <article><span>2</span><h3>QRコードで接続</h3><p>QRコードを読み取れる端末なら、そのまま接続できます。ファイルを渡せる環境では接続鍵ファイルも利用できます。</p></article>
         <article><span>3</span><h3>いつもの画面から読み上げ</h3><p>入力はモバイル側。音声生成は接続先PC側。生成された音声だけを受け取って再生します。</p></article>
       </div>
       <div class="media-pair">
@@ -97,10 +97,10 @@
           </picture>
         </figure>
         <figure class="shot">
-          <div class="shot-placeholder"><strong>&lt;画像05&gt;</strong><span>スマホ側のクライアントモード接続画面</span><code>assets/05-client-mode.webp</code></div>
+          <div class="shot-placeholder"><strong>&lt;画像05&gt;</strong><span>クライアントモード接続画面</span><code>assets/05-client-mode.webp</code></div>
           <picture>
             <source srcset="./assets/05-client-mode.webp" type="image/webp">
-            <img src="./assets/05-client-mode.png" alt="スマートフォンのtyped-voiceクライアントモード画面" loading="lazy" onload="this.classList.add('is-loaded')" onerror="this.hidden=true">
+            <img src="./assets/05-client-mode.png" alt="typed-voiceのクライアントモード画面" loading="lazy" onload="this.classList.add('is-loaded')" onerror="this.hidden=true">
           </picture>
         </figure>
       </div>
