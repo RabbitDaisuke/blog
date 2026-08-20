@@ -125,32 +125,55 @@
         <h2>もっと使うなら、専用サーバー</h2>
         <p>typed-voice-serverは、1台のPCだけでなく、参加したTrusted Workerへ音声合成を割り振れるサーバープロジェクトです。ブラウザをWorkerとして参加させ、必要に応じて処理役を増やせます。</p>
       </div>
-      <div class="server-grid">
-        <article><h3>ブラウザをWorkerに</h3><p>Worker用URLを信頼できる参加者へ渡すと、そのブラウザを音声合成Workerとして参加させられます。</p></article>
-        <article><h3>Workerは動的に増減</h3><p>開いているWorkerに処理を割り振り、切断したWorkerの処理は条件内で別Workerへ再割り当てします。</p></article>
-        <article><h3>管理画面からモデル選択</h3><p>利用するモデルをサーバー側で選択し、参加中のWorkerへ同じ設定を配布します。</p></article>
+      <div class="server-gallery" aria-label="typed-voice-serverの画面ギャラリー">
+        <article class="server-gallery-item">
+          <figure class="shot shot-dark shot-terminal">
+            <div class="shot-placeholder"><strong>&lt;Terminal&gt;</strong><span>typed-voice-server 起動時のターミナル</span><code>assets/terminal.webp</code></div>
+            <picture>
+              <source srcset="./assets/terminal.webp" type="image/webp">
+              <img src="./assets/terminal.png" alt="typed-voice-server起動時のターミナル表示" loading="lazy" onload="this.classList.add('is-loaded')" onerror="this.hidden=true">
+            </picture>
+          </figure>
+          <div class="server-gallery-copy">
+            <p class="eyebrow">Launch</p>
+            <h3>起動すると、必要な接続先がまとまって出る</h3>
+            <p>サーバーを起動すると、ターミナルに利用するURLや状態がまとまって表示されます。ここから管理画面やWorker参加画面を開けます。</p>
+          </div>
+        </article>
+        <article class="server-gallery-item">
+          <figure class="shot shot-dark shot-admin">
+            <div class="shot-placeholder"><strong>&lt;Admin&gt;</strong><span>typed-voice-server 管理画面</span><code>assets/admin2.webp</code></div>
+            <picture>
+              <source srcset="./assets/admin2.webp" type="image/webp">
+              <img src="./assets/admin2.png" alt="typed-voice-serverの管理画面" loading="lazy" onload="this.classList.add('is-loaded')" onerror="this.hidden=true">
+            </picture>
+          </figure>
+          <div class="server-gallery-copy">
+            <p class="eyebrow">Admin</p>
+            <h3>管理画面で、サーバー全体を確認</h3>
+            <p>接続用QR、Trusted Workerの状態、利用する音声モデルなどを1画面で確認できます。参加中のWorkerへ同じモデル設定を配布する操作もここで行います。</p>
+          </div>
+        </article>
+        <article class="server-gallery-item">
+          <figure class="shot shot-dark shot-worker">
+            <div class="shot-placeholder"><strong>&lt;Worker&gt;</strong><span>Trusted Worker参加画面</span><code>assets/worker.webp</code></div>
+            <picture>
+              <source srcset="./assets/worker.webp" type="image/webp">
+              <img src="./assets/worker.png" alt="typed-voice-serverへ参加するTrusted Worker画面" loading="lazy" onload="this.classList.add('is-loaded')" onerror="this.hidden=true">
+            </picture>
+          </figure>
+          <div class="server-gallery-copy">
+            <p class="eyebrow">Trusted Worker</p>
+            <h3>ブラウザを、音声合成の処理役にする</h3>
+            <p>Worker用URLを信頼できる参加者へ渡し、そのブラウザを音声合成Workerとして参加させられます。開いているWorkerへ処理を割り振り、必要に応じて処理役を増やせます。</p>
+          </div>
+        </article>
       </div>
-      <figure class="shot shot-dark shot-terminal">
-        <div class="shot-placeholder"><strong>&lt;画像06&gt;</strong><span>typed-voice-server 起動時のターミナル</span><code>assets/terminal.webp</code></div>
-        <picture>
-          <source srcset="./assets/terminal.webp" type="image/webp">
-          <img src="./assets/terminal.png" alt="typed-voice-server起動時のターミナル表示" loading="lazy" onload="this.classList.add('is-loaded')" onerror="this.hidden=true">
-        </picture>
-      </figure>
-      <div class="media-pair media-pair-small">
-        <figure class="shot shot-dark">
-          <div class="shot-placeholder"><strong>&lt;画像07&gt;</strong><span>Trusted Worker参加画面</span><code>assets/07-worker.webp</code></div>
-          <picture>
-            <source srcset="./assets/07-worker.webp" type="image/webp">
-            <img src="./assets/07-worker.png" alt="typed-voice-serverへ参加しているTrusted Worker画面" loading="lazy" onload="this.classList.add('is-loaded')" onerror="this.hidden=true">
-          </picture>
-        </figure>
-        <div class="server-note">
-          <p class="eyebrow">For Windows</p>
-          <h3>普段の起動はServer.cmdから</h3>
-          <p>Windows向け配布では、必要な環境を準備したあとは展開先の<code>Server.cmd</code>から起動できます。Remote用のQuick Tunnelも通常起動時に用意されます。</p>
-          <a class="button button-light" href="https://github.com/DaisukeDaisuke/typed-voice-server">typed-voice-serverを見る</a>
-        </div>
+      <div class="server-note server-note-standalone">
+        <p class="eyebrow">For Windows</p>
+        <h3>普段の起動はServer.cmdから</h3>
+        <p>Windows向け配布では、必要な環境を準備したあとは展開先の<code>Server.cmd</code>から起動できます。Remote用のQuick Tunnelも通常起動時に用意されます。</p>
+        <a class="button button-light" href="https://github.com/DaisukeDaisuke/typed-voice-server">typed-voice-serverを見る</a>
       </div>
     </div>
   </section>
