@@ -46,15 +46,18 @@
         <p>基本はシンプルです。文章を書けば、その場で音声合成しその文章を音声として読み上げます。端末や使う場所に合わせて、動かし方を選べます。</p>
       </div>
       <div class="feature-grid">
-        <article class="feature-card"><span class="feature-number">01</span><h3>文章を、その場で読み上げ</h3><p>入力した文章を音声へ変換。会話中に打ち込んだ文章を声として届けたいときにも使えます。</p></article>
+        <article class="feature-card"><span class="feature-number">01</span><h3>文章を、その場で読み上げ</h3><p>入力した文章を音声へ変換。会話中に打ち込んだ文章を声として端末のスピーカーで届けたいときにも使えます。</p></article>
         <article class="feature-card"><span class="feature-number">02</span><h3>タブレットでも使える</h3><p>専用アプリを入れるのではなく、タブレットでも対応するブラウザから同じ画面を利用できます。</p></article>
         <article class="feature-card"><span class="feature-number">03</span><h3>準備後はオフラインでも</h3><p>音声モデルを端末へ準備しておけば、通信できない場所でも端末側で音声を生成できます。</p></article>
         <article class="feature-card"><span class="feature-number">04</span><h3>重い処理はPCへ</h3><p>モバイル側はクライアントとして使い、音声合成をモバイル回線経由でゲーミングPCへ任せるクライアントモードも用意しています。</p></article>
       </div>
       <div id="browser-use-detail" class="article-copy">
         <h3>ブラウザを開けば、そこが読み上げ画面</h3>
-        <p>typed-voiceは「モデルをどう動かすか」を先に考えるための画面ではありません。はじめて開いたときの案内に沿って準備したら、普段は文章を入力して読み上げるだけです。</p>
+        <p>typed-voiceは「モデルをどう動かすか」を先に考えるための画面ではありません。<br>はじめて開いたときの案内に沿って準備したら、普段は文章を入力して読み上げるだけです。</p>
         <p>同じ画面の中に会話、読み上げ履歴、設定をまとめています。PC用とモバイル用で別々の操作を覚えるのではなく、端末が変わっても同じ使い方を目指しています。</p>
+      </div>
+      <div class="hero-actions">
+        <a class="button button-primary" href="https://daisukedaisuke.github.io/typed-voice/">typed-voiceを開く</a>
       </div>
     </div>
   </section>
@@ -136,8 +139,8 @@
           </figure>
           <div class="server-gallery-copy">
             <p class="eyebrow">Launch</p>
-            <h3>起動すると、必要な接続先がまとまって出る</h3>
-            <p>サーバーを起動すると、ターミナルに利用するURLや状態がまとまって表示されます。ここから管理画面やWorker参加画面を開けます。</p>
+            <h3>オールインワンサーバー</h3>
+            <p>サーバーを起動すると、ターミナルに認証済みURL表示がされます。<br>面倒なログインウィザードはありません。</p>
           </div>
         </article>
         <article class="server-gallery-item">
@@ -150,8 +153,8 @@
           </figure>
           <div class="server-gallery-copy">
             <p class="eyebrow">Admin</p>
-            <h3>管理画面で、サーバー全体を確認</h3>
-            <p>接続用QR、Trusted Workerの状態、利用する音声モデルなどを1画面で確認できます。参加中のWorkerへ同じモデル設定を配布する操作もここで行います。</p>
+            <h3>管理パネルでサーバー全体を確認</h3>
+            <p>接続用QR、Trusted Workerの状態、利用する音声モデルなどを1画面で確認できます。<br>音質切り替えも簡単です。</p>
           </div>
         </article>
         <article class="server-gallery-item">
@@ -164,8 +167,8 @@
           </figure>
           <div class="server-gallery-copy">
             <p class="eyebrow">Trusted Worker</p>
-            <h3>ブラウザを、音声合成の処理役にする</h3>
-            <p>Worker用URLを信頼できる参加者へ渡し、そのブラウザを音声合成Workerとして参加させられます。開いているWorkerへ処理を割り振り、必要に応じて処理役を増やせます。</p>
+            <h3>安全なブラウザ内実行を使用した音声合成ソリューション</h3>
+            <p>Worker用の認証情報を含むURLをボランティアまたは自分で開き、そのパソコンを音声合成役のコンピューターとして参加させられます。<br>必要に応じて処理役を増やせます。</p>
           </div>
         </article>
       </div>
@@ -175,29 +178,39 @@
         <p>Windows向け配布では、必要な環境を準備したあとは展開先の<code>Server.cmd</code>から起動できます。Remote用のQuick Tunnelも通常起動時に用意されます。</p>
         <a class="button button-light" href="https://github.com/DaisukeDaisuke/typed-voice-server">typed-voice-serverを見る</a>
       </div>
+      <div class="server-note server-note-standalone">
+        <p class="eyebrow">ホスティングフリー</p>
+        <h3>追加料金なし</h3>
+        <p>回線費用、モバイル回線課金、電気代を除き、追加のホスティング使用料はかかりません。<br>typed-voice-serverは<a href="https://try.cloudflare.com/" target="_blank" rel="noopener noreferrer">Cloud Quick Tunnels</a>経由でホスティングされます。<br>自分でサーバーを立てる場合でも、面倒なポート解放やNat越え設定、ホスティング料金は必要ありません。</p>
+      </div>
+      <div class="server-note server-note-standalone">
+        <p class="eyebrow">codexサンドボックス</p>
+        <h3>万が一サーバーが侵害されても</h3>
+        <p>typed-voice-serverは、デフォルトでCodexサンドボックスを境界として採用しています。<br>もしもリモートコード実行が起きても、攻撃者は境界を超えることはできません。</p>
+      </div>
     </div>
   </section>
   <section id="server-mode" class="section shell">
     <div class="section-heading section-heading-wide">
       <p class="eyebrow">Server mode</p>
       <h2>別の端末から、PCの力を借りる。</h2>
-      <p>タブレットなど別の端末で画面を操作しながら、実際の音声合成はPCへ任せることもできます。端末側へ大きな負荷を掛けたくないときにも使えます。</p>
+      <p>タブレットなど別の端末で画面を操作しながら、実際の音声合成はPCへ任せることもできます。<br>端末側へ大きなダウンロードや、負荷を掛けたくないときにも使えます。</p>
     </div>
     <div class="steps">
-      <article><span>1</span><h3>PCでサーバーを起動</h3><p>typed-voice-serverを起動すると、別の端末を接続するための情報が用意されます。</p></article>
+      <article><span>1</span><h3>PCでサーバーを起動</h3><p>typed-voice-serverを起動すると、別の端末を接続するための管理ページと、情報が用意されます。</p></article>
       <article><span>2</span><h3>QRコードで接続</h3><p>QRコードを読み取れる端末なら、そのまま接続できます。ファイルを渡せる環境では接続鍵ファイルも利用できます。</p></article>
-      <article><span>3</span><h3>いつもの画面から読み上げ</h3><p>入力は接続した端末側。音声生成は接続先PC側。生成された音声だけを受け取って再生します。</p></article>
+      <article><span>3</span><h3>いつもの画面から読み上げ</h3><p>入力は接続した端末側。音声生成は接続先PC側。<br>生成された音声だけを受け取って再生します。</p></article>
     </div>
-    <figure class="shot shot-wide">
-      <div class="shot-placeholder"><strong>&lt;画像04&gt;</strong><span>PC側に表示されたQRコード・接続案内</span><code>assets/04-pairing.webp</code></div>
+    <figure class="shot shot-wide shot-qr-reader">
+      <div class="shot-placeholder"><strong>&lt;画像04&gt;</strong><span>クライアントモードのQR読み取り画面</span><code>assets/QR_reader.webp</code></div>
       <picture>
-        <source srcset="./assets/04-pairing.webp" type="image/webp">
-        <img src="./assets/04-pairing.png" alt="PC側のtyped-voice-serverに表示された接続用QRコード" loading="lazy" onload="this.classList.add('is-loaded')" onerror="this.hidden=true">
+        <source srcset="./assets/QR_reader.webp" type="image/webp">
+        <img src="./assets/QR_reader.png" alt="typed-voiceのクライアントモードでPCに表示されたQRを読み取る画面" loading="lazy" onload="this.classList.add('is-loaded')" onerror="this.hidden=true">
       </picture>
     </figure>
     <div class="article-copy article-copy-centered">
-      <h3>接続先を手で入力しなくていい</h3>
-      <p>サーバーが用意したQRコード、または接続鍵ファイルに必要な接続情報をまとめています。接続する端末で長いURLや鍵を打ち込む必要はありません。</p>
+      <h3>起動ごとに生成されるQRコード</h3>
+      <p>サーバー起動ごとに管理ページで生成されるQRコードは、接続情報がオールインワンです。また、サーバーを終了するまで、1つのQRコードが使用されます。接続する端末で長いURLや鍵を打ち込む必要はありません。</p>
       <p>通常起動ではRemote接続だけを外部へ公開し、管理画面やWorker参加口はローカルに残す構成です。</p>
     </div>
   </section>
@@ -205,6 +218,7 @@
   <section class="cta-section">
     <div class="shell cta-inner">
       <div><p class="eyebrow">Start typing, start speaking.</p><h2>文字を、声にしてみよう。</h2><p>まずはブラウザから。必要になったら、オフラインやクライアントモードへ。</p></div>
+      <img class="site-qr-code" src="./assets/site.png" alt="typed-voiceを開くQRコード" loading="lazy">
       <a class="button button-primary button-large" href="https://daisukedaisuke.github.io/typed-voice/">typed-voiceを開く</a>
     </div>
   </section>
