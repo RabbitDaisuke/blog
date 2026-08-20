@@ -42,7 +42,7 @@ jobs:
       - name: Recompress PNG images with Zopfli
         run: |
           find public -type f -name '*.png' -print0 \
-            | xargs -0 -r -P 2 -I{} ./zopfli/zopflipng --keepcolortype -m -y '{}' '{}'
+            | xargs -0 -r -P 4 -I{} ./zopfli/zopflipng --keepcolortype -m -y '{}' '{}'
       - name: Build static site
         run: |
           mkdir -p _site
