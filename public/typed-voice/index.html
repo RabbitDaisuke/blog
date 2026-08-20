@@ -95,7 +95,7 @@
       <div class="article-copy client-mode-copy">
         <p class="eyebrow">Offline mode</p>
         <h3>最初に準備すれば、あとは端末だけで使える</h3>
-        <p>はじめて使うときにモデルを選び、ダウンロードが終わるまで待ちます。準備したモデルはブラウザ側に保存されるので、次回から同じモデルを毎回取り直す必要はありません。</p>
+        <p>はじめて使うときにモデルを選び、ダウンロードが終わるまで待ちます。<br>準備したモデルはブラウザ側に保存されるので、次回から同じモデルを毎回取り直す必要はありません。</p>
         <p>準備後は通信を切った状態でもtyped-voiceを開き、文章を入力して端末内で音声を生成できます。サーバーへの接続は不要です。</p>
         <div class="callout"><strong>こんなときに</strong><span>外出先、回線が不安定な場所、PCを起動していないとき。</span></div>
         <br><a class="button button-primary" href="https://daisukedaisuke.github.io/typed-voice/">typed-voiceを開く</a>
@@ -113,7 +113,7 @@
       <div class="article-copy client-mode-copy">
         <p class="eyebrow">Client mode</p>
         <h3>必要なときだけ、PCへ任せる</h3>
-        <p>クライアントモードは必須ではありません。今までどおり端末だけで音声合成する使い方もでき、PCの性能を使いたいときだけ切り替えられます。</p>
+        <p>クライアントモードは必須ではありません。<br>今までどおり端末だけで音声合成する使い方もでき、PCの性能を使いたいときだけ切り替えられます。</p>
         <div class="callout"><strong>こんなときに</strong><span>タブレットのストレージ、メモリに余裕がなくても大丈夫です。<br>ゲーミングパソコンにモバイル回線経由で接続したら、そのまま合成できます。</span></div>
         <br><a class="button button-primary" href="https://daisukedaisuke.github.io/typed-voice?server=1">typed-voiceクライアントモードを開く</a>
       </div>
@@ -130,8 +130,8 @@
       <div class="article-copy client-mode-copy">
         <p class="eyebrow">Server connection</p>
         <h3>QRを読み取って、PCへ接続</h3>
-        <p>PC側でtyped-voice-serverを起動したら、接続したい端末でクライアントモードを選び、PCに表示されたQRを読み取ります。QRの読み取り処理は端末内で行われます。</p>
-        <p>接続後は、文章の入力や操作は手元の端末のまま、音声合成をPCへ任せられます。QRに入る接続情報はサーバー起動中だけ有効で、サーバーを終了すると失効します。</p>
+        <p>PC側でtyped-voice-serverを起動したら、接続したい端末でクライアントモードを選び、PCに表示されたQRを読み取ります。<br>QRの読み取り処理は端末内で行われます。</p>
+        <p>接続後は、文章の入力や操作は手元の端末のまま、音声合成をPCへ任せられます。<br>QRに入る接続情報はサーバー起動中だけ有効で、サーバーを終了すると失効します。</p>
         <div class="callout"><strong>こんなときに</strong><span>QRコードは起動中変わらないため、信頼している人だけに読み上げサーバーの接続情報を送れます。<br>プロバイダーに会話が見られることもありません。</span></div>
         <br><a class="button button-primary" href="https://daisukedaisuke.github.io/typed-voice?server=1">typed-voiceクライアントモードを開く</a>
       </div>
@@ -142,7 +142,7 @@
       <div class="section-heading section-heading-inverse">
         <p class="eyebrow">typed-voice-server</p>
         <h2>もっと使うなら、専用サーバー</h2>
-        <p>typed-voice-serverは、1台のPCだけでなく、参加したTrusted Workerへ音声合成を割り振れるサーバープロジェクトです。<br>ブラウザをWorkerとして参加させ、必要に応じて処理役を増やせます。</p>
+        <p>typed-voice-serverは、1台のPCだけでなく、参加したTrusted Workerへ音声合成を割り振れるサーバープロジェクトです。<br>ブラウザをWorkerとして参加させ、必要に応じて1つのサーバーで音声合成ワーカーを複数個に増やせます。</p>
       </div>
       <div class="server-gallery" aria-label="typed-voice-serverの画面ギャラリー">
         <article class="server-gallery-item">
