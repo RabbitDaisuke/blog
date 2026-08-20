@@ -10,19 +10,19 @@
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <a class="brand" href="#top" aria-label="typed-voice トップへ">typed-voice</a>
-    <nav class="site-nav" aria-label="ページ内ナビゲーション">
-      <a href="#overview">概要</a>
-      <a href="#offline">オフラインモード</a>
-      <a href="#server-mode">サーバーモード</a>
-      <a href="#dedicated-server">専用サーバー</a>
-    </nav>
-  </header>
-  <main id="top">
-    <section class="hero">
-      <div class="hero-copy shell">
-        <div class="hero-glass">
+<header class="site-header">
+  <a class="brand" href="#top" aria-label="typed-voice トップへ">typed-voice</a>
+  <nav class="site-nav" aria-label="ページ内ナビゲーション">
+    <a href="#overview">概要</a>
+    <a href="#offline">オフラインモード</a>
+    <a href="#server-mode">サーバーモード</a>
+    <a href="#dedicated-server">専用サーバー</a>
+  </nav>
+</header>
+<main id="top">
+  <section class="hero">
+    <div class="hero-copy shell">
+      <div class="hero-glass">
         <p class="eyebrow">Browser TTS</p>
         <h1>文字を打つ。<br>そのまま、声になる。</h1>
         <p class="hero-lead">typed-voiceは、ブラウザから文章を音声に変換するためのツールです。必要なら自宅のPCへ音声合成を任せることもできます。</p>
@@ -36,11 +36,11 @@
           <li>オフライン利用</li>
           <li>PCへ合成を任せられる</li>
         </ul>
-        </div>
       </div>
-    </section>
-    <section id="overview" class="section section-overview">
-      <div class="shell">
+    </div>
+  </section>
+  <section id="overview" class="section section-overview">
+    <div class="shell">
       <div class="section-heading">
         <p class="eyebrow">What you can do</p>
         <h2>何ができるの？</h2>
@@ -57,115 +57,136 @@
         <p>typed-voiceは「モデルをどう動かすか」を先に考えるための画面ではありません。はじめて開いたときの案内に沿って準備したら、普段は文章を入力して読み上げるだけです。</p>
         <p>同じ画面の中に会話、読み上げ履歴、設定をまとめています。PC用とモバイル用で別々の操作を覚えるのではなく、端末が変わっても同じ使い方を目指しています。</p>
       </div>
+    </div>
+  </section>
+  <section class="section shell">
+    <div class="section-heading">
+      <p class="eyebrow">Choose your style</p>
+      <h2>どんな場合でも使える</h2>
+    </div>
+    <div class="mode-grid">
+      <article><span>いちばん手軽</span><h3>そのまま使う</h3><p>ブラウザでtyped-voiceを開いて、端末側で音声生成。</p><strong>まず試したい人へ</strong></article>
+      <article><span>外出先にも</span><h3>オフラインで使う</h3><p>準備済みモデルを使い、通信なしで端末側生成。</p><strong>回線に頼りたくない人へ</strong></article>
+      <article><span>PCの性能を使う</span><h3>サーバーへ接続</h3><p>操作は別の端末、音声生成はPCへ任せる。</p><strong>端末側の負荷を抑えたい人へ</strong></article>
+    </div>
+    <div class="client-mode-detail offline-mode-detail">
+      <figure class="shot shot-modelpicker">
+        <div class="shot-placeholder"><strong>&lt;オフライン利用&gt;</strong><span>はじめて使うときの音声モデル選択画面</span><code>assets/modelpicker.webp</code></div>
+        <picture>
+          <source srcset="./assets/modelpicker.webp" type="image/webp">
+          <img src="./assets/modelpicker.png" alt="typed-voiceではじめて使う音声モデルを選ぶ操作チュートリアル" loading="lazy" onload="this.classList.add('is-loaded')" onerror="this.hidden=true">
+        </picture>
+      </figure>
+      <div class="article-copy client-mode-copy">
+        <p class="eyebrow">Offline mode</p>
+        <h3>最初に準備すれば、あとは端末だけで使える</h3>
+        <p>はじめて使うときにモデルを選び、ダウンロードが終わるまで待ちます。準備したモデルはブラウザ側に保存されるので、次回から同じモデルを毎回取り直す必要はありません。</p>
+        <p>準備後は通信を切った状態でもtyped-voiceを開き、文章を入力して端末内で音声を生成できます。サーバーへの接続は不要です。</p>
+        <div class="callout"><strong>こんなときに</strong><span>外出先、回線が不安定な場所、PCを起動していないとき。</span></div>
       </div>
-    </section>
-    <section id="offline" class="section section-tint">
-      <div class="shell split-layout">
-        <div class="article-copy">
-          <p class="eyebrow">Offline mode</p>
-          <h2>端末だけで使う、オフラインモード</h2>
-          <p>最初に音声モデルを準備すると、対応するブラウザでは必要なデータを端末へ保存します。準備が終わったあとは、同じ大容量モデルを毎回取り直す必要はありません。</p>
-          <p>通信できない場面では、保存済みのモデルを使って端末の中で音声を生成します。ネットワーク越しに自宅PCへ接続したくないときも、このモードだけで使えます。</p>
-          <div class="callout"><strong>こんなときに</strong><span>外出先、回線が不安定な場所、PCを起動していないとき。</span></div>
-        </div>
-        <figure class="shot shot-phone">
-          <div class="shot-placeholder"><strong>&lt;画像03&gt;</strong><span>モデル選択・ダウンロード準備のモバイル画面</span><code>assets/03-offline.webp</code></div>
-          <picture>
-            <source srcset="./assets/03-offline.webp" type="image/webp">
-            <img src="./assets/03-offline.png" alt="typed-voiceでオフライン用の音声モデルを準備する画面" loading="lazy" onload="this.classList.add('is-loaded')" onerror="this.hidden=true">
-          </picture>
-        </figure>
+    </div>
+    <div class="client-mode-detail">
+      <figure class="shot shot-client">
+        <div class="shot-placeholder"><strong>&lt;画像05&gt;</strong><span>クライアントモードの操作チュートリアル</span><code>assets/client.webp</code></div>
+        <picture>
+          <source srcset="./assets/client.webp" type="image/webp">
+          <img src="./assets/client.png" alt="typed-voiceのクライアントモード操作チュートリアル" loading="lazy" onload="this.classList.add('is-loaded')" onerror="this.hidden=true">
+        </picture>
+      </figure>
+      <div class="article-copy client-mode-copy">
+        <p class="eyebrow">Client mode</p>
+        <h3>必要なときだけ、PCへ任せる</h3>
+        <p>クライアントモードは必須ではありません。今までどおり端末だけで音声合成する使い方もでき、PCの性能を使いたいときだけ切り替えられます。</p>
+        <div class="callout"><strong>こんなときに</strong><span>タブレットのストレージ、メモリに余裕がなくても大丈夫です。<br>ゲーミングパソコンにモバイル回線経由で接続したら、そのまま合成できます。</span></div>
       </div>
-    </section>
-    <section id="server-mode" class="section shell">
-      <div class="section-heading section-heading-wide">
-        <p class="eyebrow">Server mode</p>
-        <h2>別の端末から、PCの力を借りる。</h2>
-        <p>モバイル端末で画面を操作しながら、実際の音声合成は別のPCへ任せることもできます。端末側へ大きな負荷を掛けたくないときのためのクライアントモードです。</p>
+    </div>
+    <div class="client-mode-detail server-connect-detail">
+      <figure class="shot shot-qr">
+        <div class="shot-placeholder"><strong>&lt;サーバー接続&gt;</strong><span>PCに表示されたQRを端末で読み取る操作チュートリアル</span><code>assets/qr.webp</code></div>
+        <picture>
+          <source srcset="./assets/qr.webp" type="image/webp">
+          <img src="./assets/qr.png" alt="PCに表示された接続用QRを端末で読み取るtyped-voiceの操作チュートリアル" loading="lazy" onload="this.classList.add('is-loaded')" onerror="this.hidden=true">
+        </picture>
+      </figure>
+      <div class="article-copy client-mode-copy">
+        <p class="eyebrow">Server connection</p>
+        <h3>QRを読み取って、PCへ接続</h3>
+        <p>PC側でtyped-voice-serverを起動したら、接続したい端末でクライアントモードを選び、PCに表示されたQRを読み取ります。QRの読み取り処理は端末内で行われます。</p>
+        <p>接続後は、文章の入力や操作は手元の端末のまま、音声合成をPCへ任せられます。QRに入る接続情報はサーバー起動中だけ有効で、サーバーを終了すると失効します。</p>
+        <div class="callout"><strong>こんなときに</strong><span>QRコードは起動中変わらないため、信頼している人だけに読み上げサーバーの接続情報を送れます。<br>プロバイダーに会話が見られることもありません。</span></div>
       </div>
-      <div class="steps">
-        <article><span>1</span><h3>PCでサーバーを起動</h3><p>typed-voice-serverを起動すると、モバイルを接続するための情報が用意されます。</p></article>
-        <article><span>2</span><h3>QRコードで接続</h3><p>QRコードを読み取れる端末なら、そのまま接続できます。ファイルを渡せる環境では接続鍵ファイルも利用できます。</p></article>
-        <article><span>3</span><h3>いつもの画面から読み上げ</h3><p>入力はモバイル側。音声生成は接続先PC側。生成された音声だけを受け取って再生します。</p></article>
+    </div>
+  </section>
+  <section id="dedicated-server" class="section section-dark">
+    <div class="shell">
+      <div class="section-heading section-heading-inverse">
+        <p class="eyebrow">typed-voice-server</p>
+        <h2>もっと使うなら、専用サーバー</h2>
+        <p>typed-voice-serverは、1台のPCだけでなく、参加したTrusted Workerへ音声合成を割り振れるサーバープロジェクトです。ブラウザをWorkerとして参加させ、必要に応じて処理役を増やせます。</p>
       </div>
-      <div class="media-pair">
-        <figure class="shot">
-          <div class="shot-placeholder"><strong>&lt;画像04&gt;</strong><span>PC側に表示されたQRコード・接続案内</span><code>assets/04-pairing.webp</code></div>
-          <picture>
-            <source srcset="./assets/04-pairing.webp" type="image/webp">
-            <img src="./assets/04-pairing.png" alt="PC側のtyped-voice-serverに表示された接続用QRコード" loading="lazy" onload="this.classList.add('is-loaded')" onerror="this.hidden=true">
-          </picture>
-        </figure>
-        <figure class="shot">
-          <div class="shot-placeholder"><strong>&lt;画像05&gt;</strong><span>クライアントモード接続画面</span><code>assets/05-client-mode.webp</code></div>
-          <picture>
-            <source srcset="./assets/05-client-mode.webp" type="image/webp">
-            <img src="./assets/05-client-mode.png" alt="typed-voiceのクライアントモード画面" loading="lazy" onload="this.classList.add('is-loaded')" onerror="this.hidden=true">
-          </picture>
-        </figure>
+      <div class="server-grid">
+        <article><h3>ブラウザをWorkerに</h3><p>Worker用URLを信頼できる参加者へ渡すと、そのブラウザを音声合成Workerとして参加させられます。</p></article>
+        <article><h3>Workerは動的に増減</h3><p>開いているWorkerに処理を割り振り、切断したWorkerの処理は条件内で別Workerへ再割り当てします。</p></article>
+        <article><h3>管理画面からモデル選択</h3><p>利用するモデルをサーバー側で選択し、参加中のWorkerへ同じ設定を配布します。</p></article>
       </div>
-      <div class="article-copy article-copy-centered">
-        <h3>接続先を手で入力しなくていい</h3>
-        <p>サーバーが用意したQRコード、または接続鍵ファイルに必要な接続情報をまとめています。モバイル側で長いURLや鍵を打ち込む必要はありません。</p>
-        <p>通常起動ではRemote接続だけを外部へ公開し、管理画面やWorker参加口はローカルに残す構成です。自分のPCを自分のモバイルから使うだけなら、公開範囲を増やさず利用できます。</p>
-      </div>
-    </section>
-    <section id="dedicated-server" class="section section-dark">
-      <div class="shell">
-        <div class="section-heading section-heading-inverse">
-          <p class="eyebrow">typed-voice-server</p>
-          <h2>もっと使うなら、専用サーバー。</h2>
-          <p>typed-voice-serverは、1台のPCだけでなく、参加したTrusted Workerへ音声合成を割り振れるサーバープロジェクトです。ブラウザをWorkerとして参加させ、必要に応じて処理役を増やせます。</p>
-        </div>
-        <div class="server-grid">
-          <article><h3>ブラウザをWorkerに</h3><p>Worker用URLを信頼できる参加者へ渡すと、そのブラウザを音声合成Workerとして参加させられます。</p></article>
-          <article><h3>Workerは動的に増減</h3><p>開いているWorkerに処理を割り振り、切断したWorkerの処理は条件内で別Workerへ再割り当てします。</p></article>
-          <article><h3>管理画面からモデル選択</h3><p>利用するモデルをサーバー側で選択し、参加中のWorkerへ同じ設定を配布します。</p></article>
-        </div>
+      <figure class="shot shot-dark shot-terminal">
+        <div class="shot-placeholder"><strong>&lt;画像06&gt;</strong><span>typed-voice-server 起動時のターミナル</span><code>assets/terminal.webp</code></div>
+        <picture>
+          <source srcset="./assets/terminal.webp" type="image/webp">
+          <img src="./assets/terminal.png" alt="typed-voice-server起動時のターミナル表示" loading="lazy" onload="this.classList.add('is-loaded')" onerror="this.hidden=true">
+        </picture>
+      </figure>
+      <div class="media-pair media-pair-small">
         <figure class="shot shot-dark">
-          <div class="shot-placeholder"><strong>&lt;画像06&gt;</strong><span>typed-voice-server 管理画面。Worker数とモデル選択が見える状態</span><code>assets/06-server-admin.webp</code></div>
+          <div class="shot-placeholder"><strong>&lt;画像07&gt;</strong><span>Trusted Worker参加画面</span><code>assets/07-worker.webp</code></div>
           <picture>
-            <source srcset="./assets/06-server-admin.webp" type="image/webp">
-            <img src="./assets/06-server-admin.png" alt="typed-voice-serverの管理画面" loading="lazy" onload="this.classList.add('is-loaded')" onerror="this.hidden=true">
+            <source srcset="./assets/07-worker.webp" type="image/webp">
+            <img src="./assets/07-worker.png" alt="typed-voice-serverへ参加しているTrusted Worker画面" loading="lazy" onload="this.classList.add('is-loaded')" onerror="this.hidden=true">
           </picture>
         </figure>
-        <div class="media-pair media-pair-small">
-          <figure class="shot shot-dark">
-            <div class="shot-placeholder"><strong>&lt;画像07&gt;</strong><span>Trusted Worker参加画面</span><code>assets/07-worker.webp</code></div>
-            <picture>
-              <source srcset="./assets/07-worker.webp" type="image/webp">
-              <img src="./assets/07-worker.png" alt="typed-voice-serverへ参加しているTrusted Worker画面" loading="lazy" onload="this.classList.add('is-loaded')" onerror="this.hidden=true">
-            </picture>
-          </figure>
-          <div class="server-note">
-            <p class="eyebrow">For Windows</p>
-            <h3>普段の起動はServer.cmdから</h3>
-            <p>Windows向け配布では、必要な環境を準備したあとは展開先の<code>Server.cmd</code>から起動できます。Remote用のQuick Tunnelも通常起動時に用意されます。</p>
-            <a class="button button-light" href="https://github.com/DaisukeDaisuke/typed-voice-server">typed-voice-serverを見る</a>
-          </div>
+        <div class="server-note">
+          <p class="eyebrow">For Windows</p>
+          <h3>普段の起動はServer.cmdから</h3>
+          <p>Windows向け配布では、必要な環境を準備したあとは展開先の<code>Server.cmd</code>から起動できます。Remote用のQuick Tunnelも通常起動時に用意されます。</p>
+          <a class="button button-light" href="https://github.com/DaisukeDaisuke/typed-voice-server">typed-voice-serverを見る</a>
         </div>
       </div>
-    </section>
-    <section class="section shell">
-      <div class="section-heading">
-        <p class="eyebrow">Choose your style</p>
-        <h2>使い方は、あとから変えられる。</h2>
-      </div>
-      <div class="mode-grid">
-        <article><span>いちばん手軽</span><h3>そのまま使う</h3><p>ブラウザでtyped-voiceを開いて、端末側で音声生成。</p><strong>まず試したい人へ</strong></article>
-        <article><span>外出先にも</span><h3>オフラインで使う</h3><p>準備済みモデルを使い、通信なしで端末側生成。</p><strong>回線に頼りたくない人へ</strong></article>
-        <article><span>PCの性能を使う</span><h3>サーバーへ接続</h3><p>操作はモバイル、音声生成はPCへ任せる。</p><strong>モバイル負荷を抑えたい人へ</strong></article>
-      </div>
-    </section>
-    <section class="cta-section">
-      <div class="shell cta-inner">
-        <div><p class="eyebrow">Start typing, start speaking.</p><h2>文字を、声にしてみよう。</h2><p>まずはブラウザから。必要になったら、オフラインやサーバーモードへ。</p></div>
-        <a class="button button-primary button-large" href="https://daisukedaisuke.github.io/typed-voice/">typed-voiceを開く</a>
-      </div>
-    </section>
-  </main>
-  <footer class="site-footer">
-    <div class="shell footer-inner"><strong>typed-voice</strong><span>Browser-based text-to-speech project.</span><a href="https://github.com/DaisukeDaisuke/typed-voice">GitHub</a></div>
-  </footer>
+    </div>
+  </section>
+  <section id="server-mode" class="section shell">
+    <div class="section-heading section-heading-wide">
+      <p class="eyebrow">Server mode</p>
+      <h2>別の端末から、PCの力を借りる。</h2>
+      <p>タブレットなど別の端末で画面を操作しながら、実際の音声合成はPCへ任せることもできます。端末側へ大きな負荷を掛けたくないときにも使えます。</p>
+    </div>
+    <div class="steps">
+      <article><span>1</span><h3>PCでサーバーを起動</h3><p>typed-voice-serverを起動すると、別の端末を接続するための情報が用意されます。</p></article>
+      <article><span>2</span><h3>QRコードで接続</h3><p>QRコードを読み取れる端末なら、そのまま接続できます。ファイルを渡せる環境では接続鍵ファイルも利用できます。</p></article>
+      <article><span>3</span><h3>いつもの画面から読み上げ</h3><p>入力は接続した端末側。音声生成は接続先PC側。生成された音声だけを受け取って再生します。</p></article>
+    </div>
+    <figure class="shot shot-wide">
+      <div class="shot-placeholder"><strong>&lt;画像04&gt;</strong><span>PC側に表示されたQRコード・接続案内</span><code>assets/04-pairing.webp</code></div>
+      <picture>
+        <source srcset="./assets/04-pairing.webp" type="image/webp">
+        <img src="./assets/04-pairing.png" alt="PC側のtyped-voice-serverに表示された接続用QRコード" loading="lazy" onload="this.classList.add('is-loaded')" onerror="this.hidden=true">
+      </picture>
+    </figure>
+    <div class="article-copy article-copy-centered">
+      <h3>接続先を手で入力しなくていい</h3>
+      <p>サーバーが用意したQRコード、または接続鍵ファイルに必要な接続情報をまとめています。接続する端末で長いURLや鍵を打ち込む必要はありません。</p>
+      <p>通常起動ではRemote接続だけを外部へ公開し、管理画面やWorker参加口はローカルに残す構成です。</p>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="shell cta-inner">
+      <div><p class="eyebrow">Start typing, start speaking.</p><h2>文字を、声にしてみよう。</h2><p>まずはブラウザから。必要になったら、オフラインやサーバーモードへ。</p></div>
+      <a class="button button-primary button-large" href="https://daisukedaisuke.github.io/typed-voice/">typed-voiceを開く</a>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="shell footer-inner"><strong>typed-voice</strong><span>Browser-based text-to-speech project.</span><a href="https://github.com/DaisukeDaisuke/typed-voice">GitHub</a></div>
+</footer>
 </body>
 </html>
