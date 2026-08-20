@@ -68,7 +68,7 @@
     </div>
     <div class="mode-grid">
       <article><span>いちばん手軽</span><h3>そのまま使う</h3><p>ブラウザでtyped-voiceを開いて、端末側で音声生成。</p><strong><a href="#browser-use-detail">まず試したい人へ</a></strong></article>
-      <article><span>外出先にも</span><h3>オフラインで使う</h3><p>準備済みモデルを使い、通信なしで端末側生成。</p><strong><a href="#offline-mode-detail">回線に頼りたくない人へ</a></strong></article>
+      <article><span>外出先にも</span><h3>オフラインで使う</h3><p>準備済みモデルを使い、通信なしで端末側で生成。</p><strong><a href="#offline-mode-detail">回線に頼りたくない人へ</a></strong></article>
       <article><span>PCの性能を使う</span><h3>サーバーへ接続</h3><p>操作は別の端末、音声生成はPCへ任せる。</p><strong><a href="#server-connect-detail">端末側の負荷を抑えたい人へ</a></strong></article>
     </div>
     <div id="offline-mode-detail" class="client-mode-detail offline-mode-detail">
@@ -171,7 +171,7 @@
           <div class="server-gallery-copy">
             <p class="eyebrow">Trusted Worker</p>
             <h3>安全なブラウザ内実行を使用した音声合成ソリューション</h3>
-            <p>Worker用の認証情報を含むURLをボランティアまたは自分で開き、そのパソコンを音声合成役のコンピューターとして参加させられます。<br>必要に応じて処理役を増やせます。<br>音声合成はブラウザ内で完結するため、ボランティアのパソコンが侵害される心配はありません。</p>
+            <p>Worker用の認証情報を含むURLをボランティアまたは自分で開き、そのパソコンを音声合成役のコンピューターとして参加させられます。<br>必要に応じて処理役を増やせます。<br>音声合成はブラウザ内で完結します。</p>
           </div>
         </article>
       </div>
@@ -184,12 +184,12 @@
       <div class="server-note server-note-standalone">
         <p class="eyebrow">ホスティングフリー</p>
         <h3>追加料金なし</h3>
-        <p>回線費用、モバイル回線課金、電気代を除き、追加のホスティング使用料はかかりません。<br>typed-voice-serverは<a href="https://try.cloudflare.com/" target="_blank" rel="noopener noreferrer">完全無料のCloud Quick Tunnels</a>経由でホスティングされます。<br>自分でサーバーを立てる場合でも、面倒なポート解放やNat越え設定、ホスティング料金は必要ありません。</p>
+        <p>回線費用、モバイル回線課金、電気代を除き、追加のホスティング使用料はかかりません。<br>typed-voice-serverは<a href="https://try.cloudflare.com/" target="_blank" rel="noopener noreferrer">完全無料のCloud Quick Tunnels</a>経由でホスティングされます。<br>自分でサーバーを立てる場合でも、面倒なポート解放や<a href="https://squid-ink-cafe.com/lag/lag-ready-05/" target="_blank" rel="noopener noreferrer">Nat越え</a>設定、ホスティング料金は必要ありません。</p>
       </div>
       <div class="server-note server-note-standalone">
         <p class="eyebrow">codexサンドボックス</p>
         <h3>万が一サーバーが侵害されても</h3>
-        <p>typed-voice-serverは、デフォルトでCodexサンドボックスを境界として採用しています。<br>もしもリモートコード実行が起きても、攻撃者は境界を超えることはできません。</p>
+        <p>typed-voice-serverは、デフォルトでCodexサンドボックスを境界として採用しています。<br>もしもリモートコード実行が起きても、攻撃者は境界を超えることはできませんが、絶対保証するものではありません。</p>
       </div>
     </div>
   </section>
