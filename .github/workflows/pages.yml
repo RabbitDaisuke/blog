@@ -37,9 +37,16 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y imagemagick
+      - name: Cache PNG images
+        id: png-cache
+        uses: actions/cache@v6.1.0
+        with:
+          path: public/**/*.png
+          key: png-${{ runner.os }}-${{ hashFiles('public/**/*.png') }}
       - name: Build lossless WebP images
         run: bash scripts/build-webp.sh public
       - name: Recompress PNG images with Zopfli
+        if: steps.png-cache.outputs.cache-hit != 'true'
         run: |
           find public -type f -name '*.png' -print0 \
             | xargs -0 -r -P 4 -I{} ./zopfli/zopflipng --keepcolortype -m -y '{}' '{}'
