@@ -18,7 +18,16 @@ jobs:
         uses: actions/checkout@v7
       - name: Configure Pages
         uses: actions/configure-pages@v6
+      - name: Cache PNG images
+        id: png-cache
+        uses: actions/cache@v6
+        with:
+          path: |
+            public/**/*.png
+            public/**/*.webp
+          key: png-${{ runner.os }}-${{ hashFiles('public/**/*.png') }}
       - name: Cache zopflipng
+        if: steps.zopflipng-cache.outputs.cache-hit != 'true'
         id: zopflipng-cache
         uses: actions/cache@v6
         with:
@@ -35,16 +44,12 @@ jobs:
         working-directory: zopfli
         run: make zopflipng -j2
       - name: Install ImageMagick
+        if: steps.png-cache.outputs.cache-hit != 'true'
         run: |
           sudo apt-get update
           sudo apt-get install -y imagemagick
-      - name: Cache PNG images
-        id: png-cache
-        uses: actions/cache@v6
-        with:
-          path: public/**/*.png
-          key: png-${{ runner.os }}-${{ hashFiles('public/**/*.png') }}
       - name: Build lossless WebP images
+        if: steps.png-cache.outputs.cache-hit != 'true'
         run: bash scripts/build-webp.sh public
       - name: Recompress PNG images with Zopfli
         if: steps.png-cache.outputs.cache-hit != 'true'
