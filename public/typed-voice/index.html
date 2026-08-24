@@ -293,6 +293,10 @@
         <div class="faq-answer"><p>通常モードでは、入力した文章や会話内容を外部の音声合成サーバーへ送信しません。音声合成はあなたの端末内で、あなたのために行われます。</p></div>
       </details>
       <details class="faq-item">
+        <summary>このサイトではGoogle Analyticsが使われています。移動先のサイトでも使われていますか？</summary>
+        <div class="faq-answer"><p>いいえ。プライバシーとオフライン利用を妨げないため、Google Analyticsはこのランディングページでのみ使用しており、移動先のtyped-voice本体では使用していません。<br>収集したアクセス情報は、このランディングページの改善に役立てさせていただきます。</p></div>
+      </details>
+      <details class="faq-item">
         <summary>typed-voiceはTBSや「VIVANT」の公式アプリケーションですか？</summary>
         <div class="faq-answer"><p>いいえ。typed-voiceはTBSや「VIVANT」の公式アプリケーションではありません。また、これらの著作物や、声優様などの権利を侵害するためのアプリケーションでもありません。</p></div>
       </details>
@@ -446,31 +450,33 @@
       </div>
     </div>
   </section>
-  <script>
-    document
-            .querySelectorAll('a[href="https://rabbitdaisuke.github.io/typed-voice/"]')
-            .forEach((link) => {
-              link.addEventListener("click", () => {
-                gtag("event", "open_typed_voice", {
-                  link_url: link.href,
-                  link_id: link.id
-                });
-              });
-            });
-    document
-            .querySelectorAll('a[href="https://github.com/DaisukeDaisuke/typed-voice-server/blob/main/INSTALL.md"]')
-            .forEach((link) => {
-              link.addEventListener("click", () => {
-                gtag("event", "open_typed_voice_server", {
-                  link_url: link.href,
-                  link_id: link.id
-                });
-              });
-            });
-  </script>
 </main>
 <footer class="site-footer">
   <div class="shell footer-inner"><strong>typed-voice</strong><span>Browser-based text-to-speech project.</span><a href="https://github.com/DaisukeDaisuke/typed-voice">GitHub</a></div>
 </footer>
+
+<script>
+  document
+          .querySelectorAll('a[href="https://rabbitdaisuke.github.io/typed-voice/"]')
+          .forEach((link) => {
+            link.addEventListener("click", () => {
+              gtag("event", "open_typed_voice", {
+                link_url: link.href,
+                link_id: link.id
+              });
+            });
+          });
+  document
+          .querySelectorAll('a[href="https://github.com/DaisukeDaisuke/typed-voice-server/blob/main/INSTALL.md"]')
+          .forEach((link) => {
+            link.addEventListener("click", () => {
+              gtag("event", "open_typed_voice_server", {
+                link_url: link.href,
+                link_id: link.id
+              });
+            });
+          });
+</script>
+
 </body>
 </html>
