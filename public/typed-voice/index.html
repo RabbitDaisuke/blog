@@ -268,20 +268,20 @@
     </div>
     <div class="faq-list">
       <details class="faq-item">
+        <summary>なぜ本当に無料で利用できるのですか？なぜ広告が完全にないのですか？違法ではないのですか？</summary>
+        <div class="faq-answer"><p>違法な仕組みではありません。typed-voiceは、利用条件に沿って利用できるつくよみちゃんを採用し、音声合成AIをブラウザ内で動かすためのソフトウェアについても、各ライセンスや利用規約に沿う形で構成しています。必要なデータやプログラムは、公式に無料で提供されている配布元から取得します。<br>これらはライセンスや利用規約を遵守した正規の配布・利用であり、他人のデバイスを無断で使って音声合成する仕組みでもないため、違法な方法で提供しているものではありません。<br>また、音声合成の処理を利用者の端末内で行い、配布には無料で利用できるホスティングや配布サービスを活用しているため、運営側で大規模な音声合成サーバーを常時用意する必要がありません。そのため、広告収入に頼らず、無料で公開・提供できる構成になっています。</p></div>
+      </details>
+      <details class="faq-item">
         <summary>このアプリケーションは無料ですか？</summary>
         <div class="faq-answer"><p>はい。完全に無料で、広告も完全にありません。今後有料化することや、自社アプリの広告が追加されることはありません。</p></div>
       </details>
       <details class="faq-item">
-        <summary>端末の音声合成ソフトウェアを使用しますか？</summary>
-        <div class="faq-answer"><p>いいえ。あなたのデバイスにダウンロードする、音声合成AIつくよみちゃんを使用します。</p></div>
+        <summary>このアプリケーションのソースコード(プログラムの設計図)は公開されていますか？</summary>
+        <div class="faq-answer"><p>はい。すべてのソースコードがオープンソース(完全にソースコードを開示すること)であり、GitHubというサイトで公開されています。<br>下記から完全なソースコードが利用可能です。<br><a href="https://github.com/RabbitDaisuke/typed-voice" target="_blank" rel="noopener noreferrer">RabbitDaisuke/typed-voice</a><br><a href="https://github.com/DaisukeDaisuke/typed-voice-server" target="_blank" rel="noopener noreferrer">DaisukeDaisuke/typed-voice-server</a><br><a href="https://github.com/RabbitDaisuke/blog" target="_blank" rel="noopener noreferrer">RabbitDaisuke/blog</a><br><a href="https://github.com/DaisukeDaisuke/tsukuyomichan-omnivoice-onnx" target="_blank" rel="noopener noreferrer">DaisukeDaisuke/tsukuyomichan-omnivoice-onnx</a><br>開発にはChatGPTを使用しており、生成されたコードは開発者が確認・監査しています。</p></div>
       </details>
       <details class="faq-item">
-        <summary>このソフトウェアは、多数の利用があったときに利用できなくなりますか？</summary>
-        <div class="faq-answer"><p>部分的にはい。typed-voiceはすべて無料のホスティング、インフラで構築されており、アクセスが増えるとアクセスできなくなる可能性があります。<br>そのため、運営費がかからず、広告は完全にありません。ただし、すでに端末にダウンロードしたオフラインでの利用が、多数の利用によって妨害されることはありません。</p></div>
-      </details>
-      <details class="faq-item">
-        <summary>アプリケーションをアンインストールするにはどうすればいいですか？</summary>
-        <div class="faq-answer"><p>上部のツールバーから設定を開き、設定内の「高度」という文字を押し、「アプリケーションをアンインストールする」をクリックして免責事項に同意すると、アプリケーションをブラウザからアンインストールできます。</p></div>
+        <summary>普通の翻訳アプリとtyped-voiceとの違いは何ですか？</summary>
+        <div class="faq-answer"><p>一般的な翻訳アプリは、文章を別の言語へ翻訳することが主な目的で、読み上げは付随機能として提供されることが多くあります。<br>一方、typed-voiceは翻訳ではなく読み上げそのものに特化しており、デバイスのリソースを活用して、音声の品質を重視した合成を行います。</p></div>
       </details>
       <details class="faq-item">
         <summary>これはドラムさんの声アプリを再現するものですか？</summary>
@@ -296,40 +296,12 @@
         <div class="faq-answer"><p>Chrome、Safariを推奨動作環境とし、外で使用する場合は、最新機種のタブレットでの使用を推奨します。</p></div>
       </details>
       <details class="faq-item">
-        <summary>クライアントモードとはなにですか？</summary>
-        <div class="faq-answer"><p>クライアントモードは、typed-voiceを端末内で音声合成するのではなく、管理サーバーに接続し、そのサーバーに音声合成をお願いするモードです。<br>これは必須ではなく、性能の低いデバイスでもゲーミングパソコンとモバイル回線があれば、音声合成を利用可能にするためにあります。</p></div>
-      </details>
-      <details class="faq-item">
-        <summary>オフラインで使えますか？</summary>
-        <div class="faq-answer"><p>はい。チュートリアルを完了すると、アプリケーションはブラウザにインストールされるため、オフラインや電波のない場所でも使用できるようになります。<br>ただし、遠隔のパソコンに音声合成をしてもらうクライアントモード（必須ではありません）では、モバイル回線経由で音声を転送するため、インターネット接続が必要です。</p></div>
-      </details>
-      <details class="faq-item">
-        <summary>声を変更したり、作中の声に変更できますか？</summary>
-        <div class="faq-answer"><p>いいえ。つくよみちゃん以外の声に変更することはできません。このアプリケーションは、本当にこのアプリケーションが必要な人のために設計しており、作中っぽい機能を並べるアプリケーションではないため、声を変更することはできません。</p></div>
-      </details>
-      <details class="faq-item">
-        <summary>モンゴル語に対応していますか？</summary>
-        <div class="faq-answer"><p>いいえ。日本語と英語のみ対応しています。</p></div>
-      </details>
-      <details class="faq-item">
-        <summary>スマホ、タブレット、パソコンにインストールされている音声合成を使用することはできますか？</summary>
-        <div class="faq-answer"><p>いいえ。このアプリケーションは常につくよみちゃんという音声合成AIの声と品質を使用します。</p></div>
-      </details>
-      <details class="faq-item">
-        <summary>合成に時間がかかるのはなぜですか？</summary>
-        <div class="faq-answer"><p>クライアントモードを使用しない場合、合成はあなたのデバイスであなたのために直接行われます。<br>文字が外部に流出することはなく、あなたのデバイスで完結するため、合成のための時間がかかります。</p></div>
-      </details>
-      <details class="faq-item">
-        <summary>このアプリケーションを使うとバッテリー消耗が激しいのはなぜですか？</summary>
-        <div class="faq-answer"><p>このアプリケーションは、あなたのために端末内で音声合成を行います。<br>そのため、端末内の演算能力を通常時より多く使用するため、バッテリー消耗が早くなります。</p></div>
-      </details>
-      <details class="faq-item">
         <summary>ブラウザへのダウンロードやインストールは必要ですか？</summary>
         <div class="faq-answer"><p>はい。ただし、ブラウザ内で完結するようになっています。チュートリアルを進めると、ダウンロード容量を確認するダイアログが表示され、承認するまでアプリケーションの大部分のインストールは行われません。</p></div>
       </details>
       <details class="faq-item">
-        <summary>好きな文章でしゃべらせることはできますか？</summary>
-        <div class="faq-answer"><p>部分的にはい。ただし、<a href="https://tyc.rei-yumesaki.net/about/terms/" target="_blank" rel="noopener noreferrer">つくよみちゃんの利用規約</a>に違反する文章などを読み上げることは禁止されています。</p></div>
+        <summary>オフラインで使えますか？</summary>
+        <div class="faq-answer"><p>はい。チュートリアルを完了すると、アプリケーションはブラウザにインストールされるため、オフラインや電波のない場所でも使用できるようになります。<br>ただし、遠隔のパソコンに音声合成をしてもらうクライアントモード（必須ではありません）では、モバイル回線経由で音声を転送するため、インターネット接続が必要です。</p></div>
       </details>
       <details class="faq-item">
         <summary>アクセスしたときに「チュートリアルを完了してください」と表示されました。どうすればいいですか？</summary>
@@ -340,28 +312,56 @@
         <div class="faq-answer"><p>この画面は、アプリケーションを起動するための前準備をしています。そのまま数秒放置すると、自動的にアプリケーションが起動します。</p></div>
       </details>
       <details class="faq-item">
+        <summary>合成に時間がかかるのはなぜですか？</summary>
+        <div class="faq-answer"><p>クライアントモードを使用しない場合、合成はあなたのデバイスであなたのために直接行われます。<br>文字が外部に流出することはなく、あなたのデバイスで完結するため、合成のための時間がかかります。</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>このアプリケーションを使うとバッテリー消耗が激しいのはなぜですか？</summary>
+        <div class="faq-answer"><p>このアプリケーションは、あなたのために端末内で音声合成を行います。<br>そのため、端末内の演算能力を通常時より多く使用するため、バッテリー消耗が早くなります。</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>このソフトウェアは、多数の利用があったときに利用できなくなりますか？</summary>
+        <div class="faq-answer"><p>部分的にはい。typed-voiceはすべて無料のホスティング、インフラで構築されており、アクセスが増えるとアクセスできなくなる可能性があります。<br>そのため、運営費がかからず、広告は完全にありません。ただし、すでに端末にダウンロードしたオフラインでの利用が、多数の利用によって妨害されることはありません。</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>クライアントモードとはなにですか？</summary>
+        <div class="faq-answer"><p>クライアントモードは、typed-voiceを端末内で音声合成するのではなく、管理サーバーに接続し、そのサーバーに音声合成をお願いするモードです。<br>これは必須ではなく、性能の低いデバイスでもゲーミングパソコンとモバイル回線があれば、音声合成を利用可能にするためにあります。</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>端末の音声合成ソフトウェアを使用しますか？</summary>
+        <div class="faq-answer"><p>いいえ。あなたのデバイスにダウンロードする、音声合成AIつくよみちゃんを使用します。</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>スマホ、タブレット、パソコンにインストールされている音声合成を使用することはできますか？</summary>
+        <div class="faq-answer"><p>いいえ。このアプリケーションは常につくよみちゃんという音声合成AIの声と品質を使用します。</p></div>
+      </details>
+      <details class="faq-item">
         <summary>自動翻訳機能はありますか？</summary>
         <div class="faq-answer"><p>いいえ。このアプリケーションは、入力された文字をそのまま読み上げることに特化したアプリケーションです。<br>そのため、入力された文字を翻訳して読み上げることはできません。</p></div>
       </details>
       <details class="faq-item">
-        <summary>インターネット接続時にtyped-voiceを起動すると、「修復が必要です」「300KB」といったダイアログが表示されました。どうすればいいですか？</summary>
-        <div class="faq-answer"><p>typed-voiceは、お使いのブラウザにインストールされているtyped-voiceのバージョンが、現在配布されている最新バージョンより古いことを検出すると、更新ウィザードが表示されることがあります。<br>ダイアログは複数回表示されることがありますが、更新手順の一部であるため異常ではありません。「修復が必要です」と表示されることがありますが、これも更新手順の一部であるため、承認ボタンを押してください。</p></div>
+        <summary>モンゴル語に対応していますか？</summary>
+        <div class="faq-answer"><p>いいえ。日本語と英語のみ対応しています。</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>声を変更したり、作中の声に変更できますか？</summary>
+        <div class="faq-answer"><p>いいえ。つくよみちゃん以外の声に変更することはできません。このアプリケーションは、本当にこのアプリケーションが必要な人のために設計しており、作中っぽい機能を並べるアプリケーションではないため、声を変更することはできません。</p></div>
       </details>
       <details class="faq-item">
         <summary>しゃべり方を変えることはできますか？</summary>
         <div class="faq-answer"><p>いいえ。しゃべり方やイントネーションは合成のたびに変更されます。制御することはできません。</p></div>
       </details>
       <details class="faq-item">
-        <summary>このアプリケーションのソースコード(プログラムの設計図)は公開されていますか？</summary>
-        <div class="faq-answer"><p>はい。すべてのソースコードがオープンソース(完全にソースコードを開示すること)であり、GitHubというサイトで公開されています。<br>下記から完全なソースコードが利用可能です。<br><a href="https://github.com/RabbitDaisuke/typed-voice" target="_blank" rel="noopener noreferrer">RabbitDaisuke/typed-voice</a><br><a href="https://github.com/DaisukeDaisuke/typed-voice-server" target="_blank" rel="noopener noreferrer">DaisukeDaisuke/typed-voice-server</a><br><a href="https://github.com/RabbitDaisuke/blog" target="_blank" rel="noopener noreferrer">RabbitDaisuke/blog</a><br><a href="https://github.com/DaisukeDaisuke/tsukuyomichan-omnivoice-onnx" target="_blank" rel="noopener noreferrer">DaisukeDaisuke/tsukuyomichan-omnivoice-onnx</a><br>開発にはChatGPTを使用しており、生成されたコードは開発者が確認・監査しています。</p></div>
+        <summary>好きな文章でしゃべらせることはできますか？</summary>
+        <div class="faq-answer"><p>部分的にはい。ただし、<a href="https://tyc.rei-yumesaki.net/about/terms/" target="_blank" rel="noopener noreferrer">つくよみちゃんの利用規約</a>に違反する文章などを読み上げることは禁止されています。</p></div>
       </details>
       <details class="faq-item">
-        <summary>普通の翻訳アプリとtyped-voiceとの違いは何ですか？</summary>
-        <div class="faq-answer"><p>一般的な翻訳アプリは、文章を別の言語へ翻訳することが主な目的で、読み上げは付随機能として提供されることが多くあります。<br>一方、typed-voiceは翻訳ではなく読み上げそのものに特化しており、デバイスのリソースを活用して、音声の品質を重視した合成を行います。</p></div>
+        <summary>インターネット接続時にtyped-voiceを起動すると、「修復が必要です」「300KB」といったダイアログが表示されました。どうすればいいですか？</summary>
+        <div class="faq-answer"><p>typed-voiceは、お使いのブラウザにインストールされているtyped-voiceのバージョンが、現在配布されている最新バージョンより古いことを検出すると、更新ウィザードが表示されることがあります。<br>ダイアログは複数回表示されることがありますが、更新手順の一部であるため異常ではありません。「修復が必要です」と表示されることがありますが、これも更新手順の一部であるため、承認ボタンを押してください。</p></div>
       </details>
       <details class="faq-item">
-        <summary>なぜ本当に無料で利用できるのですか？なぜ広告が完全にないのですか？違法ではないのですか？</summary>
-        <div class="faq-answer"><p>違法な仕組みではありません。typed-voiceは、利用条件に沿って利用できるつくよみちゃんを採用し、音声合成AIをブラウザ内で動かすためのソフトウェアについても、各ライセンスや利用規約に沿う形で構成しています。必要なデータやプログラムは、公式に無料で提供されている配布元から取得します。<br>これらはライセンスや利用規約を遵守した正規の配布・利用であり、他人のデバイスを無断で使って音声合成する仕組みでもないため、違法な方法で提供しているものではありません。<br>また、音声合成の処理を利用者の端末内で行い、配布には無料で利用できるホスティングや配布サービスを活用しているため、運営側で大規模な音声合成サーバーを常時用意する必要がありません。そのため、広告収入に頼らず、無料で公開・提供できる構成になっています。</p></div>
+        <summary>アプリケーションをアンインストールするにはどうすればいいですか？</summary>
+        <div class="faq-answer"><p>上部のツールバーから設定を開き、設定内の「高度」という文字を押し、「アプリケーションをアンインストールする」をクリックして免責事項に同意すると、アプリケーションをブラウザからアンインストールできます。</p></div>
       </details>
     </div>
   </section>
