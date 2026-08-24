@@ -169,9 +169,14 @@
       box-shadow:var(--shadow);
     }
 
+    .demo-video-card picture,
     .demo-video-card img{
+      display:block;
       width:100%;
       height:100%;
+    }
+
+    .demo-video-card img{
       object-fit:cover;
     }
 
@@ -318,7 +323,10 @@
       </div>
       <div class="demo-video">
         <button id="play-demo-video" class="demo-video-card" type="button" aria-label="typed-voiceのデモ動画を再生">
-          <img src="./assets/bcdk.png" alt="typed-voiceのデモ動画のプレビュー" loading="lazy">
+          <picture>
+            <source srcset="./assets/bcdk.webp" type="image/webp">
+            <img src="./assets/bcdk.png" alt="typed-voiceのデモ動画のプレビュー" loading="lazy">
+          </picture>
           <span class="demo-video-play" aria-hidden="true">
             <svg viewBox="0 0 72 52" xmlns="http://www.w3.org/2000/svg">
               <rect width="72" height="52" rx="14" fill="#ff0000"/>
@@ -713,13 +721,42 @@
   const demoVideoButton = document.getElementById("play-demo-video");
   const demoVideoDialog = document.getElementById("demo-video-dialog");
   const demoVideoFrame = document.getElementById("demo-video-frame");
+  let demoVideoPlayer = null;
+  let youtubeApiPromise = null;
 
-  demoVideoButton.addEventListener("click", () => {
-    demoVideoFrame.innerHTML = '<iframe src="https://www.youtube.com/embed/fefcY2qtmTI?si=JY4QAwySm33EEY1s&autoplay=1" title="typed-voice デモ動画" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>';
+  function loadYouTubeApi() {
+    if (window.YT?.Player) return Promise.resolve();
+    if (youtubeApiPromise) return youtubeApiPromise;
+
+    youtubeApiPromise = new Promise((resolve) => {
+      window.onYouTubeIframeAPIReady = resolve;
+      const script = document.createElement("script");
+      script.src = "https://www.youtube.com/iframe_api";
+      document.head.append(script);
+    });
+    return youtubeApiPromise;
+  }
+
+  demoVideoButton.addEventListener("click", async () => {
     demoVideoDialog.showModal();
     gtag("event", "play_demo_video", {
       video_id: "fefcY2qtmTI",
       video_url: "https://www.youtube.com/watch?v=fefcY2qtmTI"
+    });
+
+    await loadYouTubeApi();
+    if (!demoVideoDialog.open) return;
+
+    const playerHost = document.createElement("div");
+    demoVideoFrame.replaceChildren(playerHost);
+    demoVideoPlayer = new YT.Player(playerHost, {
+      videoId: "fefcY2qtmTI",
+      playerVars: { autoplay: 1, playsinline: 1 },
+      events: {
+        onStateChange: (event) => {
+          if (event.data === YT.PlayerState.ENDED) demoVideoDialog.close();
+        }
+      }
     });
   });
 
@@ -728,7 +765,12 @@
   });
 
   demoVideoDialog.addEventListener("close", () => {
-    demoVideoFrame.replaceChildren();
+    if (demoVideoPlayer) {
+      demoVideoPlayer.destroy();
+      demoVideoPlayer = null;
+    } else {
+      demoVideoFrame.replaceChildren();
+    }
   });
 </script>
 
