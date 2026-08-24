@@ -49,7 +49,7 @@
         <h1>文字を打つ。<br>そのまま、声になる。</h1>
         <p class="hero-lead">typed-voiceは、ブラウザから文章を音声に変換するためのツールです。必要なら自宅のPCへ音声合成を任せることもできます。</p>
         <div class="hero-actions">
-          <a class="button button-primary" href="https://rabbitdaisuke.github.io/typed-voice/">typed-voiceを開く</a>
+          <a id="open-typed-voice-hero" class="button button-primary" href="https://rabbitdaisuke.github.io/typed-voice/">typed-voiceを開く</a>
           <a class="button button-secondary" href="#overview">できることを見る</a>
         </div>
         <ul class="hero-points" aria-label="typed-voiceの特徴">
@@ -81,7 +81,7 @@
         <p>同じ画面の中に会話、読み上げ履歴、設定をまとめています。PC用とモバイル用で別々の操作を覚えるのではなく、端末が変わっても同じ使い方を目指しています。</p>
       </div>
       <div class="hero-actions">
-        <a class="button button-primary" href="https://rabbitdaisuke.github.io/typed-voice/">typed-voiceを開く</a>
+        <a id="open-typed-voice-overview" class="button button-primary" href="https://rabbitdaisuke.github.io/typed-voice/">typed-voiceを開く</a>
       </div>
     </div>
   </section>
@@ -96,7 +96,7 @@
       <p>それっぽい機能を並べることより、実際に使うときのことを考えて設計しています。</p>
     </div>
     <div class="hero-actions">
-      <a class="button button-primary" href="https://rabbitdaisuke.github.io/typed-voice/">typed-voiceを開く</a>
+      <a id="open-typed-voice-designed" class="button button-primary" href="https://rabbitdaisuke.github.io/typed-voice/">typed-voiceを開く</a>
     </div>
   </section>
   <section class="section shell">
@@ -123,7 +123,7 @@
         <p>はじめて使うときにモデルを選び、ダウンロードが終わるまで待ちます。<br>準備したモデルはブラウザ側に保存されるので、次回から同じモデルを毎回取り直す必要はありません。</p>
         <p>準備後は通信を切った状態でもtyped-voiceを開き、文章を入力して端末内で音声を生成できます。サーバーへの接続は不要です。</p>
         <div class="callout"><strong>こんなときに</strong><span>外出先、回線が不安定な場所、PCを起動していないとき。</span></div>
-        <br><a class="button button-primary" href="https://rabbitdaisuke.github.io/typed-voice/">typed-voiceを開く</a>
+        <br><a id="open-typed-voice-offline" class="button button-primary" href="https://rabbitdaisuke.github.io/typed-voice/">typed-voiceを開く</a>
       </div>
     </div>
     <hr class="detail-divider">
@@ -168,7 +168,7 @@
         <p class="eyebrow">typed-voice-server</p>
         <h2>もっと使うなら、専用サーバー</h2>
         <p>typed-voice-serverは、1台のPCだけでなく、参加したTrusted Workerへ音声合成を割り振れるサーバープロジェクトです。<br>ブラウザをWorkerとして参加させ、必要に応じて1つのサーバーで音声合成ワーカーを複数個に増やせます。</p>
-        <a class="button button-light" href="https://github.com/DaisukeDaisuke/typed-voice-server/blob/main/INSTALL.md">typed-voice-serverを見る</a>
+        <a id="open-typed-voice-server-dedicated" class="button button-light" href="https://github.com/DaisukeDaisuke/typed-voice-server/blob/main/INSTALL.md">typed-voice-serverを見る</a>
       </div>
       <div class="server-gallery" aria-label="typed-voice-serverの画面ギャラリー">
         <article class="server-gallery-item">
@@ -218,7 +218,7 @@
         <p class="eyebrow">For Windows</p>
         <h3>普段の起動はServer.cmdから</h3>
         <p>Windows向け配布では、必要な環境を準備したあとは展開先の<code>Server.cmd</code>から起動できます。<br>Remote用のQuick Tunnelも通常起動時に用意されます。</p>
-        <a class="button button-light" href="https://github.com/DaisukeDaisuke/typed-voice-server/blob/main/INSTALL.md">typed-voice-serverを見る</a>
+        <a id="open-typed-voice-server-windows" class="button button-light" href="https://github.com/DaisukeDaisuke/typed-voice-server/blob/main/INSTALL.md">typed-voice-serverを見る</a>
       </div>
       <div class="server-note server-note-standalone">
         <p class="eyebrow">ホスティングフリー</p>
@@ -439,12 +439,35 @@
                 loading="lazy"
         >
         <a
+                id="open-typed-voice-cta"
                 class="button button-primary button-large"
                 href="https://rabbitdaisuke.github.io/typed-voice/"
         >typed-voiceを開く</a>
       </div>
     </div>
   </section>
+  <script>
+    document
+            .querySelectorAll('a[href="https://rabbitdaisuke.github.io/typed-voice/"]')
+            .forEach((link) => {
+              link.addEventListener("click", () => {
+                gtag("event", "open_typed_voice", {
+                  link_url: link.href,
+                  link_id: link.id
+                });
+              });
+            });
+    document
+            .querySelectorAll('a[href="https://github.com/DaisukeDaisuke/typed-voice-server/blob/main/INSTALL.md"]')
+            .forEach((link) => {
+              link.addEventListener("click", () => {
+                gtag("event", "open_typed_voice_server", {
+                  link_url: link.href,
+                  link_id: link.id
+                });
+              });
+            });
+  </script>
 </main>
 <footer class="site-footer">
   <div class="shell footer-inner"><strong>typed-voice</strong><span>Browser-based text-to-speech project.</span><a href="https://github.com/DaisukeDaisuke/typed-voice">GitHub</a></div>
