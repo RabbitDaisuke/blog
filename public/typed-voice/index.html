@@ -116,7 +116,116 @@
       mask-image:linear-gradient(to bottom,#000 0%,#000 50%,rgba(0,0,0,.92) 56%,rgba(0,0,0,.55) 62%,transparent 69%);
     }
 
+    .demo-section{
+      background:var(--dark);
+      color:#fff;
+    }
+
+    .demo-showcase{
+      display:grid;
+      grid-template-columns:minmax(260px,.62fr) minmax(0,1.38fr);
+      align-items:center;
+      gap:64px;
+    }
+
+    .demo-copy{
+      max-width:440px;
+    }
+
+    .demo-copy .eyebrow{
+      color:#e6a782;
+    }
+
+    .demo-copy h2{
+      margin:0;
+      font-size:clamp(2.8rem,5vw,5.2rem);
+      font-weight:900;
+      letter-spacing:-.055em;
+      line-height:1.05;
+    }
+
+    .demo-copy p:last-child{
+      margin:24px 0 0;
+      color:#bfb5ad;
+      font-size:1.04rem;
+    }
+
+    .demo-video{
+      margin:0;
+    }
+
+    .demo-video-card{
+      position:relative;
+      display:block;
+      width:min(100%,960px);
+      aspect-ratio:16 / 9;
+      margin-inline:auto;
+      padding:0;
+      overflow:hidden;
+      cursor:pointer;
+      border:1px solid #d7cec5;
+      border-radius:var(--radius);
+      background:#000;
+      box-shadow:var(--shadow);
+    }
+
+    .demo-video-card img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+
+    .demo-video-play{
+      position:absolute;
+      top:50%;
+      left:50%;
+      width:86px;
+      transform:translate(-50%,-50%);
+      filter:drop-shadow(0 5px 14px rgba(0,0,0,.35));
+    }
+
+    .demo-video-play svg{
+      display:block;
+      width:100%;
+      height:auto;
+    }
+
+    .demo-video-dialog{
+      width:min(960px,calc(100% - 32px));
+      max-width:none;
+      padding:0;
+      overflow:hidden;
+      border:0;
+      border-radius:20px;
+      background:#000;
+      box-shadow:0 30px 100px rgba(0,0,0,.45);
+    }
+
+    .demo-video-dialog::backdrop{
+      background:rgba(0,0,0,.72);
+    }
+
+    .demo-video-frame{
+      aspect-ratio:16 / 9;
+    }
+
+    .demo-video-frame iframe{
+      display:block;
+      width:100%;
+      height:100%;
+      border:0;
+    }
+
     @media(max-width:900px){
+      .demo-showcase{
+        grid-template-columns:1fr;
+        gap:38px;
+      }
+
+      .demo-copy{
+        max-width:none;
+      }
+
       .tutorial-layout{
         grid-template-columns:1fr;
         gap:36px;
@@ -198,6 +307,26 @@
     </div>
     <div class="hero-actions">
       <a id="open-typed-voice-designed" class="button button-primary" href="https://rabbitdaisuke.github.io/typed-voice/">typed-voiceを開く</a>
+    </div>
+  </section>
+  <section class="section demo-section">
+    <div class="shell demo-showcase">
+      <div class="demo-copy">
+        <p class="eyebrow">Demo</p>
+        <h2>使っているところを見る。</h2>
+        <p>タブレットでtyped-voiceを使い、入力した文章をその場で読み上げているデモです。</p>
+      </div>
+      <div class="demo-video">
+        <button id="play-demo-video" class="demo-video-card" type="button" aria-label="typed-voiceのデモ動画を再生">
+          <img src="./assets/bcdk.png" alt="typed-voiceのデモ動画のプレビュー" loading="lazy">
+          <span class="demo-video-play" aria-hidden="true">
+            <svg viewBox="0 0 72 52" xmlns="http://www.w3.org/2000/svg">
+              <rect width="72" height="52" rx="14" fill="#ff0000"/>
+              <path d="M30 15L52 26L30 37Z" fill="#fff"/>
+            </svg>
+          </span>
+        </button>
+      </div>
     </div>
   </section>
   <section class="section shell">
@@ -551,6 +680,9 @@
       </div>
     </div>
   </section>
+  <dialog id="demo-video-dialog" class="demo-video-dialog" aria-label="typed-voice デモ動画">
+    <div id="demo-video-frame" class="demo-video-frame"></div>
+  </dialog>
 </main>
 <footer class="site-footer">
   <div class="shell footer-inner"><strong>typed-voice</strong><span>Browser-based text-to-speech project.</span><a href="https://github.com/DaisukeDaisuke/typed-voice">GitHub</a></div>
@@ -577,6 +709,27 @@
               });
             });
           });
+
+  const demoVideoButton = document.getElementById("play-demo-video");
+  const demoVideoDialog = document.getElementById("demo-video-dialog");
+  const demoVideoFrame = document.getElementById("demo-video-frame");
+
+  demoVideoButton.addEventListener("click", () => {
+    demoVideoFrame.innerHTML = '<iframe src="https://www.youtube.com/embed/fefcY2qtmTI?si=JY4QAwySm33EEY1s&autoplay=1" title="typed-voice デモ動画" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>';
+    demoVideoDialog.showModal();
+    gtag("event", "play_demo_video", {
+      video_id: "fefcY2qtmTI",
+      video_url: "https://www.youtube.com/watch?v=fefcY2qtmTI"
+    });
+  });
+
+  demoVideoDialog.addEventListener("click", (event) => {
+    if (event.target === demoVideoDialog) demoVideoDialog.close();
+  });
+
+  demoVideoDialog.addEventListener("close", () => {
+    demoVideoFrame.replaceChildren();
+  });
 </script>
 
 </body>
