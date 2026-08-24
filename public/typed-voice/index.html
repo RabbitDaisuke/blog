@@ -280,6 +280,18 @@
         <div class="faq-answer"><p>はい。すべてのソースコードがオープンソース(完全にソースコードを開示すること)であり、GitHubというサイトで公開されています。<br>下記から完全なソースコードが利用可能です。<br><a href="https://github.com/RabbitDaisuke/typed-voice" target="_blank" rel="noopener noreferrer">RabbitDaisuke/typed-voice</a><br><a href="https://github.com/DaisukeDaisuke/typed-voice-server" target="_blank" rel="noopener noreferrer">DaisukeDaisuke/typed-voice-server</a><br><a href="https://github.com/RabbitDaisuke/blog" target="_blank" rel="noopener noreferrer">RabbitDaisuke/blog</a><br><a href="https://github.com/DaisukeDaisuke/tsukuyomichan-omnivoice-onnx" target="_blank" rel="noopener noreferrer">DaisukeDaisuke/tsukuyomichan-omnivoice-onnx</a><br>開発にはChatGPTを使用しており、生成されたコードは開発者が確認・監査しています。</p></div>
       </details>
       <details class="faq-item">
+        <summary>入力した文章や会話内容は外部に送信されますか？</summary>
+        <div class="faq-answer"><p>通常モードでは、入力した文章や会話内容を外部の音声合成サーバーへ送信しません。音声合成はあなたの端末内で、あなたのために行われます。</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>typed-voiceはTBSや「VIVANT」の公式アプリケーションですか？</summary>
+        <div class="faq-answer"><p>いいえ。typed-voiceはTBSや「VIVANT」の公式アプリケーションではありません。また、これらの著作物や、声優様などの権利を侵害するためのアプリケーションでもありません。</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>typed-voiceはつくよみちゃんの公式アプリケーションですか？</summary>
+        <div class="faq-answer"><p>いいえ。typed-voiceはつくよみちゃんプロジェクトの公式アプリケーションではなく、同プロジェクトから公式に推奨・推薦されているものでもありません。</p></div>
+      </details>
+      <details class="faq-item">
         <summary>普通の翻訳アプリとtyped-voiceとの違いは何ですか？</summary>
         <div class="faq-answer"><p>一般的な翻訳アプリは、文章を別の言語へ翻訳することが主な目的で、読み上げは付随機能として提供されることが多くあります。<br>一方、typed-voiceは翻訳ではなく読み上げそのものに特化しており、デバイスのリソースを活用して、音声の品質を重視した合成を行います。</p></div>
       </details>
@@ -296,8 +308,24 @@
         <div class="faq-answer"><p>Chrome、Safariを推奨動作環境とし、外で使用する場合は、最新機種のタブレットでの使用を推奨します。</p></div>
       </details>
       <details class="faq-item">
+        <summary>初回利用時にどのくらいのデータをダウンロードしますか？</summary>
+        <div class="faq-answer"><p>音声合成に必要なデータは、初回利用時にまとめてダウンロードします。最新のタブレットでも動作する推奨モデルのFP16では、<strong>1.56 GiB</strong>をダウンロードし、ブラウザデータの一部としてインストールします。<br>このデータはいつでもアンインストールでき、利用者が承認するまでダウンロードされません。</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>typed-voiceを使うには、端末にどのくらいの空き容量が必要ですか？</summary>
+        <div class="faq-answer"><p>2GB以上の完全な空き容量が必要です。ブラウザへインストールすると、2GB程度のストレージを使用します。</p></div>
+      </details>
+      <details class="faq-item">
         <summary>ブラウザへのダウンロードやインストールは必要ですか？</summary>
         <div class="faq-answer"><p>はい。ただし、ブラウザ内で完結するようになっています。チュートリアルを進めると、ダウンロード容量を確認するダイアログが表示され、承認するまでアプリケーションの大部分のインストールは行われません。</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>typed-voiceは起動するたびに音声モデルをダウンロードしますか？</summary>
+        <div class="faq-answer"><p>いいえ。最新のブラウザ技術を使い、一度準備した音声モデルをブラウザ内に保存します。クライアントモードを使用しない場合、チュートリアル完了後は完全にオフラインでも動作し、その後に必要となる通信は更新の確認と、必要な更新データのダウンロードです。</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>インターネット接続が必要なのはどのタイミングですか？</summary>
+        <div class="faq-answer"><p>チュートリアル中、必要なデータのダウンロード中、クライアントモードの利用中はインターネット接続が必要です。通常モードで使用し、チュートリアルを完了している場合は、オフラインでも使用できます。</p></div>
       </details>
       <details class="faq-item">
         <summary>オフラインで使えますか？</summary>
@@ -328,6 +356,18 @@
         <div class="faq-answer"><p>クライアントモードは、typed-voiceを端末内で音声合成するのではなく、管理サーバーに接続し、そのサーバーに音声合成をお願いするモードです。<br>これは必須ではなく、性能の低いデバイスでもゲーミングパソコンとモバイル回線があれば、音声合成を利用可能にするためにあります。</p></div>
       </details>
       <details class="faq-item">
+        <summary>クライアントモードを使わなくても利用できますか？</summary>
+        <div class="faq-answer"><p>はい。インターネット回線経由でサーバーへ音声合成を依頼するクライアントモードは、通常の利用では必須ではありません。</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>クライアントモード(必須ではない)では、入力した文章や音声データはどこへ送信されますか？</summary>
+        <div class="faq-answer"><p>クライアントモードでは、プライバシーを保護するため通信内容を暗号化し、通信事業者から会話内容がそのまま分からないようにしています。<br>ただし、自分のゲーミングパソコン以外のサーバーへ接続する場合、そのサーバーの運営者に会話内容を見られる可能性や、送信した内容どおりの音声が返ってこない可能性があります。詳しくはクライアントモードのチュートリアルを参照してください。</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>クライアントモードを使うには自分のパソコンが必要ですか？</summary>
+        <div class="faq-answer"><p>部分的にはい。基本的には、自分のパソコンでtyped-voice-serverをホスティングし、自分のために使用することをおすすめします。<br>今後、第三者によるボランティアサーバーなどが公開された場合は、自分のパソコンがなくても利用できる可能性があります。ただし、そのような第三者のサーバーを利用した場合のプライバシーや、返される音声の正確性について、開発者は保証しません。</p></div>
+      </details>
+      <details class="faq-item">
         <summary>端末の音声合成ソフトウェアを使用しますか？</summary>
         <div class="faq-answer"><p>いいえ。あなたのデバイスにダウンロードする、音声合成AIつくよみちゃんを使用します。</p></div>
       </details>
@@ -354,6 +394,10 @@
       <details class="faq-item">
         <summary>好きな文章でしゃべらせることはできますか？</summary>
         <div class="faq-answer"><p>部分的にはい。ただし、<a href="https://tyc.rei-yumesaki.net/about/terms/" target="_blank" rel="noopener noreferrer">つくよみちゃんの利用規約</a>に違反する文章などを読み上げることは禁止されています。</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>typed-voiceの更新はどのタイミングで行われますか？</summary>
+        <div class="faq-answer"><p>typed-voiceは、利用時にインターネット接続を検知すると、更新の有無を確認するために約8KBの情報ファイルをダウンロードします。<br>このファイルとブラウザにインストールされているバージョンを比較・確認し、更新が必要と判断した場合は、一部のチュートリアル進行中を除いて、すぐに更新ダイアログを表示します。更新が必要な場合は、更新を完了するまで通常の利用を続けることはできません。</p></div>
       </details>
       <details class="faq-item">
         <summary>インターネット接続時にtyped-voiceを起動すると、「修復が必要です」「300KB」といったダイアログが表示されました。どうすればいいですか？</summary>
