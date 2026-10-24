@@ -62,14 +62,13 @@
     });
   }
   function loadVideo() {
-    if (!iframe.hasAttribute('src')) {
-      const url = new URL(iframe.dataset.src);
-      if (location.protocol === 'https:' || location.protocol === 'http:') {
-        url.searchParams.set('origin', location.origin);
-      }
-      iframe.src = url.href;
-      videoCard.classList.add('has-video');
+    const url = new URL(iframe.getAttribute('src') || iframe.dataset.src, document.baseURI);
+    url.searchParams.set('enablejsapi', '1');
+    if (location.protocol === 'https:' || location.protocol === 'http:') {
+      url.searchParams.set('origin', location.origin);
     }
+    if (iframe.getAttribute('src') !== url.href) iframe.src = url.href;
+    videoCard.classList.add('has-video');
     if (window.YT?.Player) {
       initializePlayer();
     } else if (!apiRequested) {
