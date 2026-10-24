@@ -21,6 +21,7 @@
   let animation = 0;
   let settleTimer = 0;
   let mouseDown = false;
+  let touchDown = false;
   let startX = 0;
   let wasDragged = false;
   let videoPlayer = null;
@@ -204,7 +205,9 @@
     scroller.classList.remove('is-dragging');
     moveTo(Math.round(scroller.scrollLeft / step));
   });
-  scroller.addEventListener('touchstart', () => { cancelAnimation(); wasDragged = false; }, { passive: true });
+  scroller.addEventListener('touchstart', () => { touchDown = true; cancelAnimation(); wasDragged = false; }, { passive: true });
+  scroller.addEventListener('touchend', () => { touchDown = false; }, { passive: true });
+  scroller.addEventListener('touchcancel', () => { touchDown = false; }, { passive: true });
   scroller.addEventListener('wheel', cancelAnimation, { passive: true });
   scroller.addEventListener('click', event => {
     if (wasDragged) { wasDragged = false; return; }
@@ -223,4 +226,11 @@
   new ResizeObserver(resize).observe(scroller);
   resize();
   window.dragscroll?.reset();
+  setInterval(() => {
+    if (active === videoIndex && videoReady) {
+      const state = videoPlayer.getPlayerState();
+      if (state === window.YT.PlayerState.PLAYING || state === window.YT.PlayerState.BUFFERING) return;
+    }
+    if (!mouseDown && !touchDown && !animation && !document.hidden) advance(1);
+  }, 4000);
 })();
