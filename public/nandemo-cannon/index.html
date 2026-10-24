@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#dff5ff">
+  <title>なんでもキャノン｜家具も食べ物もぶっ放す物理ゲーム</title>
+  <meta name="description" content="家具、家電、食べ物、ぜーんぶ大砲でぶっ放す物理ゲーム『なんでもキャノン』！15個のモノを発射して、最後に枠に残ったモノが得点に。ふざけてもヨシ、スコアアタックに挑んでもヨシ！ブラウザで今すぐプレイ。">
+  <meta name="keywords" content="なんでもキャノン,物理ゲーム,ブラウザゲーム,無料ゲーム,大砲,物理演算,スコアアタック,家具,家電,食べ物,Qiita,クソアプリ">
+  <meta name="author" content="RabbitDaisuke">
+  <link rel="canonical" href="https://rabbitdaisuke.github.io/blog/nandemo-cannon/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="なんでもキャノン｜家具も食べ物もぶっ放す物理ゲーム">
+  <meta property="og:description" content="15個の「モノ」を発射して、最後に枠に残った「モノ」が得点になる！ふざけてもヨシ、スコアアタックに挑んでもヨシ。なんでも飛ばせる大砲で、豪快にぶっ放せ～！">
+  <meta property="og:url" content="https://rabbitdaisuke.github.io/blog/nandemo-cannon/">
+  <meta property="og:site_name" content="なんでもキャノン">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:image" content="https://rabbitdaisuke.github.io/blog/nandemo-cannon/assets/nandemo-cannon-2430.jpg">
+  <meta property="og:image:width" content="2048">
+  <meta property="og:image:height" content="1152">
+  <meta property="og:image:alt" content="なんでもキャノンで家具や家電を大砲で飛ばして積み上げたゲーム画面">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="なんでもキャノン｜家具も食べ物もぶっ放す物理ゲーム">
+  <meta name="twitter:description" content="家具、家電、食べ物、ぜーんぶ大砲でぶっ放す物理ゲーム！15個のモノで豪快にスコアアタック。">
+  <meta name="twitter:image" content="https://rabbitdaisuke.github.io/blog/nandemo-cannon/assets/nandemo-cannon-2430.jpg">
+  <meta name="twitter:image:alt" content="なんでもキャノンのゲーム画面">
+  <link rel="preload" as="image" href="./assets/nandemo-cannon-2430.jpg" fetchpriority="high">
+  <link rel="stylesheet" href="./style.css">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KKJKD565PM"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-KKJKD565PM');
+  </script>
+  <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"VideoGame","name":"なんでもキャノン","url":"https://rabbitdaisuke.github.io/nandemo-cannon/","mainEntityOfPage":"https://rabbitdaisuke.github.io/blog/nandemo-cannon/","description":"家具、家電、食べ物を大砲で発射し、最後に枠に残ったモノで得点を競う物理ゲーム。","image":"https://rabbitdaisuke.github.io/blog/nandemo-cannon/assets/nandemo-cannon-2430.jpg","inLanguage":"ja","genre":["物理ゲーム","スコアアタック"],"gamePlatform":"Web browser","author":{"@type":"Person","name":"RabbitDaisuke"}}
+  </script>
+  <script defer src="./vendor/dragscroll.js"></script>
+  <script defer src="./gallery.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へ移動</a>
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="なんでもキャノン トップ"><img src="./assets/logo.webp" width="768" height="184" alt="なんでもキャノン"></a>
+    <nav aria-label="メインナビゲーション">
+      <a class="play-button header-play" href="https://rabbitdaisuke.github.io/nandemo-cannon/">プレイする<span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+  <main id="main">
+    <div class="showcase">
+    <section class="gallery-section" id="gallery" aria-label="ゲーム画像とプレイ動画">
+      <div class="gallery-toolbar">
+        <h2 class="media-heading">ギャラリー</h2>
+        <div class="gallery-arrows">
+          <span class="gallery-counter" aria-hidden="true"><b id="slide-number">01</b><span> / 07</span></span>
+        </div>
+      </div>
+      <div class="gallery-stage">
+        <div class="gallery-scroller dragscroll" id="gallery-scroller" tabindex="0" role="region" aria-roledescription="カルーセル" aria-label="画像と動画のギャラリー">
+          <div class="gallery-track">
+            <div class="gallery-deck">
+              <article class="gallery-card is-active" data-index="0" aria-roledescription="スライド" aria-label="1 / 7：家具も家電もまとめて発射！">
+                <img src="./assets/nandemo-cannon-2430.jpg" width="2048" height="1152" alt="大砲で飛ばした冷蔵庫や洗濯機、テレビが枠の中に積み上がり2430点を獲得した画面" fetchpriority="high" draggable="false">
+              </article>
+              <article class="gallery-card" data-index="1" aria-roledescription="スライド" aria-label="2 / 7：食べ物だって、ぶっ放す。" aria-hidden="true">
+                <picture><source srcset="./assets/restaurant.webp" type="image/webp"><img src="./assets/restaurant.png" width="2047" height="1157" alt="レストランの皿にハンバーガーや目玉焼き、食べ物を大砲で飛ばす画面" draggable="false"></picture>
+              </article>
+              <article class="gallery-card" data-index="2" aria-roledescription="スライド" aria-label="3 / 7：火山でもスコアアタック！" aria-hidden="true">
+                <img src="./assets/nandemo-cannon-780.jpg" width="1278" height="718" alt="火山のステージで冷蔵庫や水の入った物を発射して積み上げた画面" draggable="false">
+              </article>
+              <article class="gallery-card" data-index="3" aria-roledescription="スライド" aria-label="4 / 7：次は何が飛び出す？" aria-hidden="true">
+                <img src="./assets/nandemo-cannon-1830.jpg" width="2048" height="1152" alt="ランダム実験室のステージで本、サボテン、時計などを台に積み上げた画面" draggable="false">
+              </article>
+              <article class="gallery-card" data-index="4" aria-roledescription="スライド" aria-label="5 / 7：いろんな場所で、豪快に。" aria-hidden="true">
+                <picture><source srcset="./assets/stages.webp" type="image/webp"><img src="./assets/stages.png" width="2048" height="1024" alt="地下室、月のクレーター、火山、海賊船、忍者屋敷などのステージ選択画面" draggable="false"></picture>
+              </article>
+              <article class="gallery-card" data-index="5" aria-roledescription="スライド" aria-label="6 / 7：ぜーんぶ、大砲の弾になる。" aria-hidden="true">
+                <picture><source srcset="./assets/items.webp" type="image/webp"><img src="./assets/items.png" width="1167" height="594" alt="花火、たこ焼き、かき氷、カヌレ、うさぎのぬいぐるみなど、投げられるモノの一覧画面" draggable="false"></picture>
+              </article>
+              <article class="gallery-card video-card" data-index="6" aria-roledescription="スライド" aria-label="7 / 7：YouTube プレイ動画" aria-hidden="true">
+                <div class="video-poster"><img src="./assets/nandemo-cannon-2430.jpg" width="2048" height="1152" alt="なんでもキャノンのプレイ動画" draggable="false"><span class="video-badge"><span aria-hidden="true">▶</span> プレイ動画</span></div>
+                <iframe id="youtube-player" width="560" height="315" data-src="https://www.youtube.com/embed/U0b1kMr31kg?si=wNtDdu20sUxlGYcE&amp;controls=0&amp;enablejsapi=1&amp;playsinline=1&amp;rel=0" title="なんでもキャノン YouTubeプレイ動画" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen tabindex="-1"></iframe>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-bottom">
+        <div class="gallery-caption"><span class="caption-line" aria-hidden="true"></span><p id="gallery-caption">家具も家電もまとめて発射！</p></div>
+        <div class="gallery-dots" role="group" aria-label="スライドを選ぶ"></div>
+      </div>
+      <p class="sr-only" id="gallery-status" role="status" aria-live="polite" aria-atomic="true">1 / 7：家具も家電もまとめて発射！</p>
+    </section>
+    </div>
+    <section class="intro" aria-labelledby="game-title">
+      <div class="intro-title">
+        <p class="catch">家具、家電、食べ物、ぜーんぶ大砲でぶっ放す物理ゲーム❗</p>
+        <h1 id="game-title"><img src="./assets/logo.webp" width="768" height="184" alt="『なんでもキャノン』❗"></h1>
+      </div>
+      <div class="intro-description">
+        <p>この世界のルールはただ1つ。15個の「モノ」を発射して最後に、枠に残った「モノ」が得点になる❗</p>
+        <p>ふざけてもヨシ、スコアアタックに挑んでもヨシ❗なんでも飛ばせる大砲で、豪快にぶっ放せ～❗</p>
+      </div>
+      <a class="play-button main-play" href="https://rabbitdaisuke.github.io/nandemo-cannon/"><span class="play-icon" aria-hidden="true">▶</span><span>今すぐ無料プレイ</span><span class="play-arrow" aria-hidden="true">↗</span></a>
+    </section>
+  </main>
+  <footer class="site-footer"><span>© 2026 DaisukeDaisuke</span></footer>
+  <noscript><p class="noscript-note">ギャラリー操作にはJavaScriptが必要です。<a href="https://www.youtube.com/watch?v=U0b1kMr31kg">プレイ動画をYouTubeで見る</a> ／ <a href="https://rabbitdaisuke.github.io/nandemo-cannon/">ゲームをプレイする</a></p></noscript>
+</body>
+</html>
