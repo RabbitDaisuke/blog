@@ -20,6 +20,7 @@
   let targetPosition = count;
   let animation = 0;
   let settleTimer = 0;
+  let autoAdvanceTimer = 0;
   let mouseDown = false;
   let touchDown = false;
   let startX = 0;
@@ -51,8 +52,9 @@
     if (videoPlayer || !window.YT?.Player) return;
     videoPlayer = new window.YT.Player('youtube-player', {
       events: {
-        onReady: () => { videoReady = true; },
+        onReady: () => { videoReady = true; scheduleAutoAdvance(); },
         onStateChange: event => {
+          scheduleAutoAdvance();
           if (event.data === window.YT.PlayerState.ENDED && active === videoIndex) {
             select(0);
             document.querySelector('#gallery').scrollIntoView({ behavior: reducedMotion.matches ? 'instant' : 'smooth', block: 'start' });
@@ -116,6 +118,7 @@
     animation = 0;
     clearTimeout(settleTimer);
     targetPosition = scroller.scrollLeft / step;
+    scheduleAutoAdvance();
   }
   function normalize() {
     const position = scroller.scrollLeft / step;
@@ -123,8 +126,10 @@
     if (Math.abs(normalized - position) > .01) scroller.scrollLeft = normalized * step;
     targetPosition = normalized;
     render();
+    scheduleAutoAdvance();
   }
   function moveTo(position) {
+    clearTimeout(autoAdvanceTimer);
     cancelAnimationFrame(animation);
     clearTimeout(settleTimer);
     targetPosition = position;
@@ -169,6 +174,7 @@
     scroller.scrollLeft = (count + active) * step;
     targetPosition = count + active;
     render();
+    scheduleAutoAdvance();
   }
   scroller.addEventListener('scroll', () => {
     // Rebase in the invisible outer cycles, including during a long continuous drag.
@@ -205,8 +211,8 @@
     moveTo(Math.round(scroller.scrollLeft / step));
   });
   scroller.addEventListener('touchstart', () => { touchDown = true; cancelAnimation(); wasDragged = false; }, { passive: true });
-  scroller.addEventListener('touchend', () => { touchDown = false; }, { passive: true });
-  scroller.addEventListener('touchcancel', () => { touchDown = false; }, { passive: true });
+  scroller.addEventListener('touchend', () => { touchDown = false; scheduleAutoAdvance(); }, { passive: true });
+  scroller.addEventListener('touchcancel', () => { touchDown = false; scheduleAutoAdvance(); }, { passive: true });
   scroller.addEventListener('wheel', cancelAnimation, { passive: true });
   scroller.addEventListener('click', event => {
     if (wasDragged) { wasDragged = false; return; }
@@ -225,11 +231,16 @@
   new ResizeObserver(resize).observe(scroller);
   resize();
   window.dragscroll?.reset();
-  setInterval(() => {
-    if (active === videoIndex && videoReady) {
-      const state = videoPlayer.getPlayerState();
-      if (state === window.YT.PlayerState.PLAYING || state === window.YT.PlayerState.BUFFERING) return;
-    }
-    if (!mouseDown && !touchDown && !animation && !document.hidden) advance(1);
-  }, 4000);
+  function scheduleAutoAdvance() {
+    clearTimeout(autoAdvanceTimer);
+    autoAdvanceTimer = setTimeout(() => {
+      if (active === videoIndex) {
+        if (!videoReady) return;
+        const state = videoPlayer.getPlayerState();
+        if (state === window.YT.PlayerState.PLAYING || state === window.YT.PlayerState.BUFFERING) return;
+      }
+      if (!mouseDown && !touchDown && !animation && !document.hidden) advance(1);
+      else scheduleAutoAdvance();
+    }, 4500);
+  }
 })();
